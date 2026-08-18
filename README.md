@@ -66,7 +66,7 @@ La plataforma utiliza un modelo de lenguaje (LLM) ajustado con un corpus de noti
    git clone https://github.com/tu-usuario/Capstone2026-TalosInforma.git
    cd Capstone2026-TalosInforma
 
-### Configurar variables de entorno
+2. **Configurar variables de entorno**
 - Crear un archivo env en la raíz del proyecto con las siguientes variables:
 
 ### Base de Datos
@@ -82,9 +82,10 @@ LLM_MODEL_PATH=./models/llama-3.gguf
 ### Redis
 REDIS_URL=redis://redis:6379
 
-### Levantar la infraestructura con Docker Compose
+3. **Levantar la infraestructura con Docker Compose**
+    ```bash
+    docker-compose up --build
 
-docker-compose up --build
 
 ### Este comando levantará todos los servicios
 
@@ -96,15 +97,15 @@ docker-compose up --build
 
 - Redis (puerto 6379)
 
-### Acceder a la plataforma
+4. **Acceder a la plataforma**
 
 - Frontend: http://localhost:3000
 
 - Documentación API (Swagger): http://localhost:8000/docs
 
-### Ejecutar el scrapper manualmente
-
-docker-compose exec scraper python main.py --run
+5. **Ejecutar el scrapper manualmente**
+    ```bash
+    docker-compose exec scraper python main.py --run
 
 ---
 
