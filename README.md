@@ -66,27 +66,27 @@ La plataforma utiliza un modelo de lenguaje (LLM) ajustado con un corpus de noti
    git clone https://github.com/tu-usuario/Capstone2026-TalosInforma.git
    cd Capstone2026-TalosInforma
 
-## Configurar variables de entorno
+### Configurar variables de entorno
 - Crear un archivo env en la raíz del proyecto con las siguientes variables:
 
-# Base de Datos
+### Base de Datos
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=tu_password
 POSTGRES_DB=talos_db
 
-# LLM
+### LLM
 OPENAI_API_KEY=tu_api_key
-# o ruta al modelo local
+### o ruta al modelo local
 LLM_MODEL_PATH=./models/llama-3.gguf
 
-# Redis
+### Redis
 REDIS_URL=redis://redis:6379
 
-## Levantar la infraestructura con Docker Compose
+### Levantar la infraestructura con Docker Compose
 
 docker-compose up --build
 
-# Este comando levantará todos los servicios
+### Este comando levantará todos los servicios
 
 - Base de datos PostgreSQL (puerto 5432)
 
@@ -96,19 +96,19 @@ docker-compose up --build
 
 - Redis (puerto 6379)
 
-# Acceder a la plataforma
+### Acceder a la plataforma
 
 - Frontend: http://localhost:3000
 
 - Documentación API (Swagger): http://localhost:8000/docs
 
-# Ejecutar el scrapper manualmente
+### Ejecutar el scrapper manualmente
 
 docker-compose exec scraper python main.py --run
 
 ---
 
-### Roles y Responsabilidades
+## Roles y Responsabilidades
 
 | Integrante | Rol | Responsabilidades |
 |---|---|---|
@@ -117,7 +117,7 @@ docker-compose exec scraper python main.py --run
 
 ---
 
-### Metodología de Trabajo
+## Metodología de Trabajo
 
 El proyecto se desarrolla bajo la metodología ágil Kanban, con un enfoque en el flujo continuo y la priorización de tareas. Esta elección se fundamenta en la necesidad de mantener flexibilidad frente a la experimentación técnica que requiere la configuración de Modelos de Lenguaje (LLMs) y la extracción de datos no estructurados mediante web scraping.
 
@@ -134,4 +134,6 @@ FRONTEND (React / Next.js): Dashboard + Mapa de sesgo + Visualizaciones
      ---> SERVICIO LLM + RAG (LangChain + FAISS + LLM): Análisis de sesgo, veracidad y recuperación de evidencia
           ---> BASE DE DATOS VECTORIAL (FAISS / Pinecone): Embeddings y evidencia histórica
      ---> SERVICIO DE CACHE (Redis): Respuestas frecuentes en memoria
+
+---
 
