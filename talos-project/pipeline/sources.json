@@ -1,0 +1,79 @@
+[
+  {
+    "id": "1",
+    "nombre": "El Libero",
+    "url_seccion": "https://ellibero.cl/",
+    "sesgo": "Right",
+    "selector_articulo": "a.noticia-link"
+  },
+  {
+    "id": "2",
+    "nombre": "Emol",
+    "url_seccion": "https://www.emol.com/nacional/",
+    "sesgo": "Right",
+    "selector_articulo": "a.noticia-link"
+  },
+  {
+    "id": "3",
+    "nombre": "Ex-Ante",
+    "url_seccion": "https://www.ex-ante.cl/",
+    "sesgo": "Right",
+    "selector_articulo": "a.noticia-link"
+  },
+
+
+
+  {
+    "id": "4",
+    "nombre": "TVN",
+    "url_seccion": "https://www.24horas.cl/",
+    "sesgo": "Center",
+    "selector_articulo": "h2.titular a"
+  },
+  {
+    "id": "5",
+    "nombre": "CNN",
+    "url_seccion": "https://www.cnnchile.com/",
+    "sesgo": "Center",
+    "selector_articulo": "a.noticia-link"
+  },
+  {
+    "id": "6",
+    "nombre": "Publimetro",
+    "url_seccion": "https://www.publimetro.cl/",
+    "sesgo": "Center",
+    "selector_articulo": "a.noticia-link"
+  },
+  {
+    "id": "7",
+    "nombre": "Radio Cooperativa",
+    "url_seccion": "https://www.cooperativa.cl/",
+    "sesgo": "Center",
+    "selector_articulo": "a.noticia-link"
+  },
+
+
+
+  {
+    "id": "8",
+    "nombre": "El Ciudadano",
+    "url_seccion": "https://www.elciudadano.com/",
+    "sesgo": "Left",
+    "selector_articulo": "a.noticia-link"
+  },
+  {
+    "id": "9",
+    "nombre": "El Siglo",
+    "url_seccion": "https://elsiglo.cl/",
+    "sesgo": "Left",
+    "selector_articulo": "a.noticia-link"
+  },
+  {
+    "id": "10",
+    "nombre": "Interferencia",
+    "url_seccion": "https://interferencia.cl/",
+    "sesgo": "Left",
+    "selector_articulo": "h3.headline a"
+
+  }
+]
