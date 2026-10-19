@@ -23,9 +23,9 @@
       "tono_titular": "Negativo",
       "subjetividad_score": 2,
       "resumen_puntos": [
-        "Se registraron incidentes y enfrentamientos entre encapuchados y Carabineros durante una marcha no autorizada por el 18-O en la Alameda.",
-        "Metro de Santiago cerró las estaciones Santa Lucía y Universidad Católica, además de los accesos por Línea 1 en Baquedano y Universidad de Chile.",
-        "Personal de Control de Orden Público de Carabineros cortó el tránsito en la Alameda a la altura de Santa Lucía y utilizó elementos de dispersión."
+        "Marcha no autorizada por la conmemoración del 18-O en la Alameda derivó en enfrentamientos entre encapuchados y Carabineros.",
+        "Metro de Santiago cerró las estaciones Santa Lucía y Universidad Católica, y clausuró accesos por Línea 1 en Baquedano y U. de Chile.",
+        "Personal de Control de Orden Público de Carabineros cortó el tránsito en la Alameda y utilizó elementos de dispersión para frenar el avance hacia La Moneda."
       ]
     }
   },
@@ -51,11 +51,11 @@
     "analisis": {
       "categoria": "Seguridad",
       "tono_titular": "Negativo",
-      "subjetividad_score": 2,
+      "subjetividad_score": 3,
       "resumen_puntos": [
-        "La PDI detuvo a un hombre de 42 años acusado del presunto parricidio de su madre de 72 años en Ciudad de Los Valles, Pudahuel.",
-        "El hallazgo del cuerpo de la víctima con evidentes lesiones motivó la intervención de la Brigada de Homicidios por orden del Ministerio Público.",
-        "El trabajo científico-técnico en el sitio del suceso, empadronamientos y revisión de cámaras de seguridad permitieron posicionar al hijo en el lugar y concretar su detención."
+        "La PDI detuvo a un hombre de 42 años acusado del presunto parricidio de su madre de 72 años en el sector Ciudad de Los Valles, Pudahuel.",
+        "El hallazgo del cadáver de la víctima con evidentes lesiones ocurrió durante la noche tras una solicitud del Ministerio Público.",
+        "La Brigada de Homicidios Metropolitana posicionó al sospechoso en el sitio del suceso mediante trabajo científico-técnico, empadronamiento y revisión de cámaras."
       ]
     }
   },
@@ -83,9 +83,9 @@
       "tono_titular": "Neutral",
       "subjetividad_score": 1,
       "resumen_puntos": [
-        "El Gobierno anunció la suspensión de clases para el martes 20 de octubre en 10 comunas de la Región Metropolitana debido a una Alerta Roja por posibles remociones en masa.",
-        "La medida rige para establecimientos de educación parvularia, básica y media en San José de Maipo, Puente Alto, Pirque, La Florida, Peñalolén, La Reina, Las Condes, Lo Barnechea, Vitacura y Colina.",
-        "Las autoridades informaron que la situación meteorológica en el resto de las comunas del Gran Santiago permanece bajo constante monitoreo."
+        "El Gobierno suspendió las clases para el martes 20 de octubre en 10 comunas de la franja precordillerana y sector oriente de la Región Metropolitana.",
+        "La medida aplica a educación parvularia, básica y media en zonas con Alerta Roja ante el riesgo de remociones en masa.",
+        "Las comunas afectadas son San José de Maipo, Puente Alto, Pirque, La Florida, Peñalolén, La Reina, Las Condes, Lo Barnechea, Vitacura y Colina."
       ]
     }
   }
