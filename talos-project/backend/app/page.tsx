@@ -33,7 +33,7 @@ export default function TalosFrontend() {
       })
       .catch((err) => {
         console.error(err);
-        setError("No se pudo conectar con el Backend. Verifica que Uvicorn esté corriendo.");
+        setError("No se pudo conectar con el Backend. Verifica que Uvicorn esté corriendo en la otra terminal.");
         setLoading(false);
       });
   }, []);
@@ -64,6 +64,7 @@ export default function TalosFrontend() {
           </nav>
         </div>
       </header>
+
       <main className="mx-auto max-w-6xl px-4 py-6">
         {loading && <p className="text-center text-slate-500 mt-10">Cargando datos desde la API...</p>}
         
