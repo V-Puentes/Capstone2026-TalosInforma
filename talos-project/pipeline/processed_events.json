@@ -1,0 +1,92 @@
+[
+  {
+    "evento_id": "f16a7a35-8ac5-48f3-976c-ba823e2bf5b1",
+    "noticias": [
+      {
+        "medio_id": "2",
+        "sesgo_politico": "Right",
+        "url": "https://www.emol.com/noticias/Nacional/2026/10/18/1214476/estallido-social-incidentes.html",
+        "titulo": "Se registran incidentes en marcha por el 18-O: Acceso cerrado en cuatro estaciones de metro",
+        "cuerpo": "Desde el mediodía de este domingo se está realizando en el centro de Santiago una marcha en conmemoración del séptimo aniversario del estallido social.\nLos manifestantes avanzan desde Plaza Baquedano por la Alameda hacia el poniente y, según información preliminar, ya se registran algunos enfrentamientos entre encapuchados y carabineros.\nDe hecho, Metro de Santiago informó que, debido a los disturbios en el exterior, se mantienen cerradas las estaciones Santa Lucía y Universidad Católica. De igual manera, los accesos por la línea 1 de las estaciones de Baquedano y U. de Chile también se encuentran cerrados, pero sus combinaciones disponibles.\nCabe destacar que no existían autorizaciones por parte de la autoridad regional para ninguna manifestación.\nCarabineros mantiene cerrada la Alameda a la altura de Santa Lucía, sector donde los manifestantes intentan avanzar hacia La Moneda.\nEn ese contexto, personal de Control de Orden Público se encuentra usando elementos de dispersión como el carro lanzaaguas.",
+        "autor": "El Mercurio S.A.P.",
+        "imagen_url": "https://static.emol.cl/emol50/Fotos/2026/10/18/file_20261018130433.jpg",
+        "fecha_extraccion": "2026-10-19T02:51:08.878301"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 0,
+      "Center": 0,
+      "Right": 1
+    },
+    "analisis": {
+      "categoria": "Seguridad",
+      "tono_titular": "Negativo",
+      "subjetividad_score": 2,
+      "resumen_puntos": [
+        "Se registraron incidentes y enfrentamientos entre encapuchados y Carabineros durante una marcha no autorizada por el 18-O en la Alameda.",
+        "Metro de Santiago cerró las estaciones Santa Lucía y Universidad Católica, además de los accesos por Línea 1 en Baquedano y Universidad de Chile.",
+        "Personal de Control de Orden Público de Carabineros cortó el tránsito en la Alameda a la altura de Santa Lucía y utilizó elementos de dispersión."
+      ]
+    }
+  },
+  {
+    "evento_id": "7d889edb-a4ae-41e1-ae7b-5d1980c48ce3",
+    "noticias": [
+      {
+        "medio_id": "4",
+        "sesgo_politico": "Center",
+        "url": "https://www.24horas.cl/actualidad/nacional/con-evidentes-lesiones-pdi-detiene-a-sujeto-por-presunto-parricidio",
+        "titulo": "\"Con evidentes lesiones\": PDI detiene a sujeto por presunto parricidio de su madre en Pudahuel",
+        "cuerpo": "Un trágico crimen familiar quedó al descubierto durante las últimas horas en el sector de Ciudad de Los Valles, en la comuna de Pudahuel. Un hombre de 42 años fue detenido, acusado de asesinar a su propia madre, una adulta mayor de 72 años.\nEl subprefecto José Cáceres, jefe de la Brigada de Homicidios Metropolitana, entregó los detalles de las primeras diligencias tras la concurrencia de los detectives al domicilio. \"El día de ayer, en horas de la noche, a solicitud del Ministerio Público, personal de la PDI (...) concurre al sitio del suceso en la comuna de Pudahuel por el hallazgo de un cadáver de sexo femenino de la tercera edad\", señaló el jefe policial.\nPara lograr la pronta captura del presunto autor, el trabajo investigativo en las inmediaciones fue clave. \"Se realiza el trabajo científico-técnico en el sitio del suceso, se empadrona, se levanta cámaras, logrando posicionar al imputado, quien corresponde a su hijo\", explicó el subprefecto Cáceres.",
+        "autor": "24horas",
+        "imagen_url": "https://www.24horas.cl/24horas/site/artic/20261018/imag/foto_0000001320261018110349/PDI.webp",
+        "fecha_extraccion": "2026-10-19T02:51:17.845364"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 0,
+      "Center": 1,
+      "Right": 0
+    },
+    "analisis": {
+      "categoria": "Seguridad",
+      "tono_titular": "Negativo",
+      "subjetividad_score": 2,
+      "resumen_puntos": [
+        "La PDI detuvo a un hombre de 42 años acusado del presunto parricidio de su madre de 72 años en Ciudad de Los Valles, Pudahuel.",
+        "El hallazgo del cuerpo de la víctima con evidentes lesiones motivó la intervención de la Brigada de Homicidios por orden del Ministerio Público.",
+        "El trabajo científico-técnico en el sitio del suceso, empadronamientos y revisión de cámaras de seguridad permitieron posicionar al hijo en el lugar y concretar su detención."
+      ]
+    }
+  },
+  {
+    "evento_id": "ddbf237d-dbc2-4f28-a02b-52b9e2390079",
+    "noticias": [
+      {
+        "medio_id": "4",
+        "sesgo_politico": "Center",
+        "url": "https://www.24horas.cl/actualidad/nacional/gobierno-confirma-suspension-de-clases-en-10-comunas-rm",
+        "titulo": "Gobierno confirma suspensión de clases en 10 comunas de la RM este martes 20 de octubre",
+        "cuerpo": "El biministro Claudio Alvarado anunció la suspensión de clases para este martes 20 de octubre en 10 comunas de la Región Metropolitana situadas en la franja precordillerana y el sector oriente.\nLa autoridad precisó el alcance territorial de la restricción. La medida rige para todos los establecimientos de educación parvularia, básica y media de las zonas que se encuentren en Alerta Roja.\n“Se tomó la decisión de suspender las clases en 10 comunas de la RM que a esta hora ya tienen Alerta Roja por eventualidad de remociones en masa”, sostuvo el biministro.\nComunas sin clases este martes 20 de octubre\nSe trata de 10 comunas de sectores precordilleranos de la región:\n-\nSan José de Maipo\n-\nPuente Alto\n-\nPirque\n-\nLa Florida\n-\nPeñalolén\n-\nLa Reina\n-\nLas Condes\n-\nLo Barnechea\n-\nVitacura\n-\nColina\nRespecto al resto de las comunas del Gran Santiago que no están bajo la medida inmediata, la autoridad ministerial informó que la situación meteorológica se mantiene en monitoreo constante. El reporte sobre eventuales extensiones de la suspensión se entregará durante la jornada de este lunes.",
+        "autor": "24horas",
+        "imagen_url": "https://www.24horas.cl/24horas/site/artic/20261018/imag/foto_0000000620261018212548/pexels-owayn-11618563.webp",
+        "fecha_extraccion": "2026-10-19T02:51:22.680512"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 0,
+      "Center": 1,
+      "Right": 0
+    },
+    "analisis": {
+      "categoria": "Sociedad",
+      "tono_titular": "Neutral",
+      "subjetividad_score": 1,
+      "resumen_puntos": [
+        "El Gobierno anunció la suspensión de clases para el martes 20 de octubre en 10 comunas de la Región Metropolitana debido a una Alerta Roja por posibles remociones en masa.",
+        "La medida rige para establecimientos de educación parvularia, básica y media en San José de Maipo, Puente Alto, Pirque, La Florida, Peñalolén, La Reina, Las Condes, Lo Barnechea, Vitacura y Colina.",
+        "Las autoridades informaron que la situación meteorológica en el resto de las comunas del Gran Santiago permanece bajo constante monitoreo."
+      ]
+    }
+  }
+]
