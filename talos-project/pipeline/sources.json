@@ -4,76 +4,69 @@
     "nombre": "El Libero",
     "url_seccion": "https://ellibero.cl/",
     "sesgo": "Right",
-    "selector_articulo": "a.noticia-link"
+    "selector_articulo": "article h3 a"
   },
   {
     "id": "2",
     "nombre": "Emol",
     "url_seccion": "https://www.emol.com/nacional/",
     "sesgo": "Right",
-    "selector_articulo": "a.noticia-link"
+    "selector_articulo": "h3 a"
   },
   {
     "id": "3",
     "nombre": "Ex-Ante",
     "url_seccion": "https://www.ex-ante.cl/",
     "sesgo": "Right",
-    "selector_articulo": "a.noticia-link"
+    "selector_articulo": "article h2 a"
   },
-
-
-
   {
     "id": "4",
     "nombre": "TVN",
-    "url_seccion": "https://www.24horas.cl/",
+    "url_seccion": "https://www.24horas.cl/actualidad/nacional",
     "sesgo": "Center",
-    "selector_articulo": "h2.titular a"
+    "selector_articulo": "article a"
   },
   {
     "id": "5",
     "nombre": "CNN",
-    "url_seccion": "https://www.cnnchile.com/",
+    "url_seccion": "https://www.cnnchile.com/pais/",
     "sesgo": "Center",
-    "selector_articulo": "a.noticia-link"
+    "selector_articulo": "article .news__title a"
   },
   {
     "id": "6",
     "nombre": "Publimetro",
-    "url_seccion": "https://www.publimetro.cl/",
+    "url_seccion": "https://www.publimetro.cl/noticias/",
     "sesgo": "Center",
-    "selector_articulo": "a.noticia-link"
+    "selector_articulo": "article h2 a"
   },
   {
     "id": "7",
     "nombre": "Radio Cooperativa",
-    "url_seccion": "https://www.cooperativa.cl/",
+    "url_seccion": "https://www.cooperativa.cl/noticias/pais/",
     "sesgo": "Center",
-    "selector_articulo": "a.noticia-link"
+    "selector_articulo": "article h3 a"
   },
-
-
-
   {
     "id": "8",
     "nombre": "El Ciudadano",
-    "url_seccion": "https://www.elciudadano.com/",
+    "url_seccion": "https://www.elciudadano.com/chile/",
     "sesgo": "Left",
-    "selector_articulo": "a.noticia-link"
+    "selector_articulo": "article h2 a"
   },
   {
     "id": "9",
     "nombre": "El Siglo",
-    "url_seccion": "https://elsiglo.cl/",
+    "url_seccion": "https://elsiglo.cl/nacional/",
     "sesgo": "Left",
-    "selector_articulo": "a.noticia-link"
+    "selector_articulo": "article h3 a"
   },
   {
     "id": "10",
     "nombre": "Interferencia",
     "url_seccion": "https://interferencia.cl/",
     "sesgo": "Left",
-    "selector_articulo": "h3.headline a"
-
+    "selector_articulo": "h2 a"
   }
 ]
