@@ -1,0 +1,532 @@
+[
+  {
+    "evento_id": "f16a7a35-8ac5-48f3-976c-ba823e2bf5b1",
+    "noticias": [
+      {
+        "medio_id": "2",
+        "sesgo_politico": "Right",
+        "url": "https://www.emol.com/noticias/Nacional/2026/10/18/1214476/estallido-social-incidentes.html",
+        "titulo": "Se registran incidentes en marcha por el 18-O: Acceso cerrado en cuatro estaciones de metro",
+        "cuerpo": "Desde el mediodía de este domingo se está realizando en el centro de Santiago una marcha en conmemoración del séptimo aniversario del estallido social.\nLos manifestantes avanzan desde Plaza Baquedano por la Alameda hacia el poniente y, según información preliminar, ya se registran algunos enfrentamientos entre encapuchados y carabineros.\nDe hecho, Metro de Santiago informó que, debido a los disturbios en el exterior, se mantienen cerradas las estaciones Santa Lucía y Universidad Católica. De igual manera, los accesos por la línea 1 de las estaciones de Baquedano y U. de Chile también se encuentran cerrados, pero sus combinaciones disponibles.\nCabe destacar que no existían autorizaciones por parte de la autoridad regional para ninguna manifestación.\nCarabineros mantiene cerrada la Alameda a la altura de Santa Lucía, sector donde los manifestantes intentan avanzar hacia La Moneda.\nEn ese contexto, personal de Control de Orden Público se encuentra usando elementos de dispersión como el carro lanzaaguas.",
+        "autor": "El Mercurio S.A.P.",
+        "imagen_url": "https://static.emol.cl/emol50/Fotos/2026/10/18/file_20261018130433.jpg",
+        "fecha_extraccion": "2026-10-19T02:51:08.878301"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 0,
+      "Center": 0,
+      "Right": 1
+    }
+  },
+  {
+    "evento_id": "7d889edb-a4ae-41e1-ae7b-5d1980c48ce3",
+    "noticias": [
+      {
+        "medio_id": "4",
+        "sesgo_politico": "Center",
+        "url": "https://www.24horas.cl/actualidad/nacional/con-evidentes-lesiones-pdi-detiene-a-sujeto-por-presunto-parricidio",
+        "titulo": "\"Con evidentes lesiones\": PDI detiene a sujeto por presunto parricidio de su madre en Pudahuel",
+        "cuerpo": "Un trágico crimen familiar quedó al descubierto durante las últimas horas en el sector de Ciudad de Los Valles, en la comuna de Pudahuel. Un hombre de 42 años fue detenido, acusado de asesinar a su propia madre, una adulta mayor de 72 años.\nEl subprefecto José Cáceres, jefe de la Brigada de Homicidios Metropolitana, entregó los detalles de las primeras diligencias tras la concurrencia de los detectives al domicilio. \"El día de ayer, en horas de la noche, a solicitud del Ministerio Público, personal de la PDI (...) concurre al sitio del suceso en la comuna de Pudahuel por el hallazgo de un cadáver de sexo femenino de la tercera edad\", señaló el jefe policial.\nPara lograr la pronta captura del presunto autor, el trabajo investigativo en las inmediaciones fue clave. \"Se realiza el trabajo científico-técnico en el sitio del suceso, se empadrona, se levanta cámaras, logrando posicionar al imputado, quien corresponde a su hijo\", explicó el subprefecto Cáceres.",
+        "autor": "24horas",
+        "imagen_url": "https://www.24horas.cl/24horas/site/artic/20261018/imag/foto_0000001320261018110349/PDI.webp",
+        "fecha_extraccion": "2026-10-19T02:51:17.845364"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 0,
+      "Center": 1,
+      "Right": 0
+    }
+  },
+  {
+    "evento_id": "ddbf237d-dbc2-4f28-a02b-52b9e2390079",
+    "noticias": [
+      {
+        "medio_id": "4",
+        "sesgo_politico": "Center",
+        "url": "https://www.24horas.cl/actualidad/nacional/gobierno-confirma-suspension-de-clases-en-10-comunas-rm",
+        "titulo": "Gobierno confirma suspensión de clases en 10 comunas de la RM este martes 20 de octubre",
+        "cuerpo": "El biministro Claudio Alvarado anunció la suspensión de clases para este martes 20 de octubre en 10 comunas de la Región Metropolitana situadas en la franja precordillerana y el sector oriente.\nLa autoridad precisó el alcance territorial de la restricción. La medida rige para todos los establecimientos de educación parvularia, básica y media de las zonas que se encuentren en Alerta Roja.\n“Se tomó la decisión de suspender las clases en 10 comunas de la RM que a esta hora ya tienen Alerta Roja por eventualidad de remociones en masa”, sostuvo el biministro.\nComunas sin clases este martes 20 de octubre\nSe trata de 10 comunas de sectores precordilleranos de la región:\n-\nSan José de Maipo\n-\nPuente Alto\n-\nPirque\n-\nLa Florida\n-\nPeñalolén\n-\nLa Reina\n-\nLas Condes\n-\nLo Barnechea\n-\nVitacura\n-\nColina\nRespecto al resto de las comunas del Gran Santiago que no están bajo la medida inmediata, la autoridad ministerial informó que la situación meteorológica se mantiene en monitoreo constante. El reporte sobre eventuales extensiones de la suspensión se entregará durante la jornada de este lunes.",
+        "autor": "24horas",
+        "imagen_url": "https://www.24horas.cl/24horas/site/artic/20261018/imag/foto_0000000620261018212548/pexels-owayn-11618563.webp",
+        "fecha_extraccion": "2026-10-19T02:51:22.680512"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 0,
+      "Center": 1,
+      "Right": 0
+    }
+  },
+  {
+    "evento_id": "60f67092-6f2a-4055-82a6-59f6b05fdc36",
+    "noticias": [
+      {
+        "medio_id": "4",
+        "sesgo_politico": "Center",
+        "url": "https://www.24horas.cl/actualidad/nacional/ojala-puedan-migrar-sus-clases-de-forma-presencial-a-telematica",
+        "titulo": "\"Ojalá migrar sus clases de forma presencial a telemática\": Delegado Codina pide suspender presencialidad en comunas precordilleranas",
+        "cuerpo": "Germán Codina (RN), delegado presidencial de la Región Metropolitana, realizó un llamado a los establecimientos educacionales de la zona precordillerana para implementar clases telemáticas este martes 20 de octubre. Esto, en el marco de las acciones preventivas ante el sistema frontal convectivo que afectará a la Región Metropolitana.\nLa recomendación fue dirigida a universidades, institutos profesionales y colegios precordilleranos. \"Ojalá ellos puedan migrar sus clases de forma presencial a telemática\", solicitó Codina para resguardar a la comunidad estudiantil.\nLa medida busca evitar el flujo de alumnos en las calles durante las horas de mayor intensidad del evento. \"Como Santiago no tiene los radares meteorológicos, es muy difícil establecer con precisión en dónde se va a manifestar con mayor intensidad\", explicó el delegado presidencial.\nDe acuerdo con la Dirección de Meteorología de Chile y Sernageomin, el pulso más severo ocurrirá la tarde del martes. Por esta razón, la delegación coordina perímetros de seguridad con municipios para impedir la circulación vehicular y peatonal en zonas con riesgo de aluvión.\nEl plan preventivo responde al decreto de emergencia climática firmado por el Ejecutivo para agilizar recursos. \"La necesidad de anticipar acciones concretas, medidas que nos permitan justamente, sobre todo, cuidar la integridad y la vida de las personas\", fundamentó Germán Codina.\nEn paralelo, se hicieron inspecciones aéreas. El Ministerio de Obras Públicas (MOP) y Carabineros evaluaron las piscinas en Nido de Águilas y quebradas críticas en Las Condes, Peñalolén y San José de Maipo, disponiendo evacuaciones preventivas en cerca de 70 viviendas vulnerables.\nAsimismo, la Seremi del Trabajo gestiona con empleadores la salida anticipada de trabajadores al mediodía del martes. Además, Carabineros mantendrá el resguardo en las zonas de limpieza y monitoreo constante en los cauces del río Maipo y Quebrada Macul.",
+        "autor": "24horas",
+        "imagen_url": "https://www.24horas.cl/24horas/site/artic/20261018/imag/foto_0000000820261018170547/German_Codina_1.webp",
+        "fecha_extraccion": "2026-10-19T02:51:25.346916"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 0,
+      "Center": 1,
+      "Right": 0
+    }
+  },
+  {
+    "evento_id": "445d4687-6f57-47d1-8c72-f32e1d688cda",
+    "noticias": [
+      {
+        "medio_id": "4",
+        "sesgo_politico": "Center",
+        "url": "https://www.24horas.cl/actualidad/nacional/metro-santiago-cierra-accesos-de-estacion-baquedano-linea-1-",
+        "titulo": "Metro de Santiago cierra accesos de estación Baquedano en Línea 1",
+        "cuerpo": "Metro de Santiago dispuso el cierre de los accesos a la estación Baquedano correspondientes a la Línea 1.\nQuienes requieran ingresar o salir en ese punto del trazado deben utilizar los accesos habilitados por la Línea 5.\nLa combinación entre ambas líneas continúa funcionando con normalidad para los usuarios de la red.\n⚠️ Desde este momento, los accesos de Baquedano #L1 se encuentran cerrados, ingreso y salida por Baquedano #L5 (combinación disponible). Seguiremos informando.— Metro de Santiago (@metrodesantiago) October 18, 2026",
+        "autor": "24horas",
+        "imagen_url": "https://www.24horas.cl/24horas/site/artic/20261018/imag/foto_0000000720261018123914/Personal_de_Carabineros_de_la_seccion_OS9.webp",
+        "fecha_extraccion": "2026-10-19T02:51:27.309517"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 0,
+      "Center": 1,
+      "Right": 0
+    }
+  },
+  {
+    "evento_id": "d27f0bd0-5edb-4875-88a3-e08994721a47",
+    "noticias": [
+      {
+        "medio_id": "4",
+        "sesgo_politico": "Center",
+        "url": "https://www.24horas.cl/actualidad/nacional/senapred-declara-alerta-roja-10-comunas-region-metropolitana",
+        "titulo": "Senapred declara Alerta Roja para 10 comunas de la Región Metropolitana por riesgo de remoción en masa",
+        "cuerpo": "El Servicio Nacional de Prevención y Respuesta ante Desastres (Senapred) declaró Alerta Roja para 10 comunas de la Región Metropolitana debido al peligro de remoción en masa\nLa decisión de la autoridad abarca los sectores precordilleranos y cordilleranos de las siguientes comunas:\n- San José de Maipo\n- Puente Alto\n- Pirque\n- La Florida\n- Peñalolén\n- La Reina\n- Las Condes\n- Lo Barnechea\n- Vitacura\n- Colina\n.\n#SenapredRM Se cancela Alerta Amarilla y declara #Alerta Roja para las comunas de San José de Maipo, Puente Alto, Pirque, La Florida, Peñalolén, La Reina, Las Condes, Lo Barnechea, Vitacura y Colina por remoción en masa. https://t.co/UvTRMJUsWt— SENAPRED (@Senapred) October 18, 2026",
+        "autor": "24horas",
+        "imagen_url": "https://www.24horas.cl/24horas/site/artic/20261018/imag/foto_0000000820261018115216/Personal_de_Carabineros_de_la_seccion_OS9.webp",
+        "fecha_extraccion": "2026-10-19T02:51:29.110849"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 0,
+      "Center": 1,
+      "Right": 0
+    }
+  },
+  {
+    "evento_id": "e64a5c16-0b14-4100-a5f4-da7867728471",
+    "noticias": [
+      {
+        "medio_id": "4",
+        "sesgo_politico": "Center",
+        "url": "https://www.24horas.cl/actualidad/nacional/gobierno-anuncia-rebaja-de-hasta-25-en-el-tag-de-autopista-central",
+        "titulo": "Gobierno anuncia rebaja de hasta 25% en el TAG de Autopista Central: Revisa cuándo comienza y los requisitos",
+        "cuerpo": "El Gobierno confirmó un importante alivio para el bolsillo de los automovilistas: una rebaja de hasta un 25% en las tarifas del TAG correspondientes a la Autopista Central.\nEl anuncio fue oficializado por el Presidente José Antonio Kast, luego de concretarse un acuerdo entre el Ministerio de Obras Públicas (MOP) y la concesionaria a cargo de la ruta, con el objetivo central de reducir los costos de circulación en una de las principales arterias de la capital.\nPese a la confirmación de la medida, el beneficio aún no entra en vigencia, puesto que actualmente requiere de una revisión administrativa y de las respectivas modificaciones al contrato. Según proyectó el Mandatario, la implementación oficial de estos nuevos valores está fijada para el 1 de enero de 2027.\n¿De cuánto será el descuento en el TAG?\nLa rebaja tarifaria considera dos tipos de descuentos, los cuales dependerán exclusivamente del horario en el que los vehículos utilicen la carretera:\n-\n25% de descuento: Aplicable durante las horas punta y en los periodos de saturación.\n-\n10% de descuento: Aplicable sobre la tarifa base, fuera de los periodos de mayor congestión.\nA modo de ejemplo, si un usuario actualmente factura $100.000 por el uso de Autopista Central y transita en los periodos de mayor congestión, el monto final bajaría a $75.000. En cambio, si utiliza la autopista fuera de las horas punta, la cuenta quedaría en $90.000.\n¿Cuáles son los requisitos para acceder a la rebaja?\nDesde el Ejecutivo aclararon que la medida no se aplicará de forma automática para todos los usuarios que transiten por la ruta.\nPara poder acceder a los descuentos, los conductores deberán cumplir con un requisito fundamental: mantener sus cuentas al día con Autopista Central. El beneficio tolerará un máximo de 60 días de rezago en los pagos, por lo que el llamado a los usuarios es a revisar su situación comercial con la concesionaria para asegurar el cumplimiento de esta condición.",
+        "autor": "24horas",
+        "imagen_url": "https://www.24horas.cl/24horas/site/artic/20261018/imag/foto_0000001420261018080342/TAG.webp",
+        "fecha_extraccion": "2026-10-19T02:51:31.328503"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 0,
+      "Center": 1,
+      "Right": 0
+    }
+  },
+  {
+    "evento_id": "647168ae-7316-4a29-8b30-8958f900216a",
+    "noticias": [
+      {
+        "medio_id": "4",
+        "sesgo_politico": "Center",
+        "url": "https://www.24horas.cl/actualidad/nacional/el-nino-amenaza-verano-extremo-chile",
+        "titulo": "El Niño amenaza con un verano extremo en Chile",
+        "cuerpo": "La llegada del fenómeno de El Niño traerá importantes consecuencias para Chile durante los próximos meses, especialmente en diciembre y enero, con temperaturas extremas y un mayor riesgo de incendios forestales.\nEn entrevista con Canal 24 Horas, Marcelo Mena, académico e investigador del Centro de Acción Climática de la Pontificia Universidad Católica de Valparaíso (PUCV) y exministro de Medio Ambiente, anticipó un complejo escenario para el verano: \"Temperaturas récord e incendios forestales intensos\".\n\"Será una tierra incógnita\"\nEl exsecretario de Estado también manifestó su preocupación por las dificultades que enfrenta Chile para anticipar fenómenos meteorológicos extremos, especialmente en sectores cordilleranos, como lo ocurrido el pasado jueves 8 de octubre en Las Condes.\n\"Será una tierra incógnita\", sostuvo el experto, quien explicó que las herramientas disponibles para realizar mediciones en la cordillera son insuficientes.\n\"Las herramientas para medir en la cordillera son limitadas y tenemos pronósticos de meteorología que no necesariamente están con la mejor información posible\", señaló.\nEn esa línea, advirtió que \"nosotros estamos prediciendo lo que pasa en la atmósfera con herramientas distantes a lo que requerimos para hacer un pronóstico fidedigno a la escala que se requiere para responder a la emergencia\".\nFinalmente, Mena alertó sobre las consecuencias económicas que podría generar El Niño y la falta de planificación y de instrumentos para anticipar emergencias climáticas en Chile, ya que este escenario podría llevar a las compañías aseguradoras a realizar una \"mejora de estimación de riesgos\", lo que se traduciría en un eventual aumento del costo de los seguros de infraestructura.\nEn tanto, advirtió que, en aquellos casos donde no exista cobertura, será el Estado el que debará asumir los costos asociados a los daños provocados por estos eventos extremos.\n\"La falta de planificación va a significar un Estado que tiene que gastar más y más endeudado, y si al Gobierno le interesa la deuda a largo plazo, es fundamental que invierta en los instrumentos para evitar que esta deuda crezca\", cerró.",
+        "autor": "24horas",
+        "imagen_url": "https://www.24horas.cl/24horas/site/artic/20261017/imag/foto_0000000320261017111305/Sin_titulo_-_23_de_abril_de_2026_13.17.13_5.webp",
+        "fecha_extraccion": "2026-10-19T02:51:34.045912"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 0,
+      "Center": 1,
+      "Right": 0
+    }
+  },
+  {
+    "evento_id": "53d8d513-7aeb-49b6-a0c2-c2b6d6f671b2",
+    "noticias": [
+      {
+        "medio_id": "6",
+        "sesgo_politico": "Center",
+        "url": "https://www.publimetro.cl/noticias/2026/10/16/sin-convocatorias-oficiales-para-el-18-o-gobierno-confirma-que-no-hay-marchas-autorizadas-y-refuerza-la-seguridad-en-santiago/",
+        "titulo": "Sin convocatorias oficiales para el 18-O: Gobierno confirma que no hay marchas autorizadas y refuerza la seguridad en Santiago",
+        "cuerpo": "En la antesala de una nueva conmemoración del estallido social del 18 de octubre de 2019, el Gobierno de Chile ratificó que no existen permisos otorgados para la realización de manifestaciones públicas en la capital. La confirmación fue realizada por el subsecretario del Interior, Máximo Pavez, quien detalló las coordinaciones mantenidas con las autoridades regionales para monitorear el desarrollo de la jornada.\nRespecto a las gestiones preventivas y el estado de las solicitudes, la autoridad sostuvo: “De acuerdo a una comunicación que he sostenido con el delegado presidencial metropolitano, Germán Codina, y su equipo, no hay solicitudes de marchas autorizadas para el domingo. Por lo tanto, es interés del Gobierno tomar ese día con normalidad”.\nMedidas de prevención y despliegue en el Metro de Santiago y comisarías\nPese a la inexistencia de permisos formales, el Ejecutivo contempla un monitoreo permanente debido a los llamados a manifestarse que han circulado a través de redes sociales. En ese contexto, se diseñó un operativo enfocado en resguardar la infraestructura pública y la tranquilidad de todas las personas que habitan en la Región Metropolitana.\nAl abordar el plan de contingencia, el subsecretario Pavez aseveró que “están las medidas para poder asegurar la tranquilidad de todas las personas que habitan en Santiago respecto de este domingo”.\nAsimismo, el representante de la cartera de Interior agregó que “hay atención a los hechos que se puedan desarrollar, pero no hay marchas autorizadas y, por lo tanto, toda la coordinación que se ha hecho internamente obedece a mirar con atención esta como otras fechas”.\nAcuartelamiento de Carabineros y resguardo de la infraestructura pública\nEl plan operativo contempla el reforzamiento estratégico de la vigilancia en puntos de alta afluencia de la capital. Las labores de prevención se enfocarán prioritariamente en la red del Metro de Santiago y en los perímetros de diversas comisarías.\nDe igual forma, se dispuso que el personal de Control de Orden Público de Carabineros permanezca en condición de acuartelamiento durante la jornada del domingo, con el fin de responder ante eventuales incidentes o alteraciones al orden público.",
+        "autor": "Sebastian Huerta Viurcos",
+        "imagen_url": "https://www.publimetro.cl/resizer/v2/572YOWOMGNAWXLS2DCGCWMRAJM.jpg?smart=true&auth=4e4bdb24765b69501d94a3e023de7a4c733810172569c5497d37dbe6c5f56ba1&width=1200&height=630",
+        "fecha_extraccion": "2026-10-19T02:51:41.095230"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 0,
+      "Center": 1,
+      "Right": 0
+    }
+  },
+  {
+    "evento_id": "5bc86e58-21ec-4561-a88f-aefc410e6438",
+    "noticias": [
+      {
+        "medio_id": "6",
+        "sesgo_politico": "Center",
+        "url": "https://www.publimetro.cl/noticias/2026/10/17/los-10-aeropuertos-mejor-conectados-del-mundo-en-2026-estambul-lidera-el-ranking/",
+        "titulo": "Los 10 aeropuertos mejor conectados del mundo en 2026: Estambul lidera el ranking",
+        "cuerpo": "Cada día, millones de viajeros atraviesan aeropuertos para llegar a sus destinos o tomar vuelos de conexión hacia otras ciudades. Sin embargo, los aeropuertos que reciben más pasajeros no son necesariamente los que ofrecen mayores posibilidades de conectar vuelos.\nEl informe Megahubs 2026, elaborado por la firma especializada en datos de aviación OAG, analizó 201 aeropuertos y situó al Aeropuerto de Estambul, en Turquía, como el mejor conectado del mundo, por delante de Londres-Heathrow y Ámsterdam-Schiphol.\nLa clasificación considera las conexiones potenciales entre vuelos y la cantidad de destinos disponibles, lo que permite identificar los principales centros de conexión aérea internacional.\nMás grande no siempre significa mejor conectado\nAtlanta encabeza la clasificación mundial por capacidad de asientos programados, pero ocupa el décimo lugar en conectividad internacional. Estambul, octavo por capacidad, lidera el índice de OAG.\nLa diferencia demuestra que no basta con disponer de numerosas rutas o vuelos: también importa cómo se distribuyen los horarios para facilitar las conexiones.\nEn Asia, Kuala Lumpur se mantiene como el aeropuerto mejor conectado de la región, mientras que la recuperación de las operaciones en China ha impulsado las posiciones de Shanghái-Pudong y Guangzhou-Baiyun.\nLos 10 aeropuertos mejor conectados del mundo\nEl índice de OAG compara las conexiones potenciales con los destinos atendidos por cada aeropuerto. Estos son los diez primeros lugares de 2026:\n1. Estambul (IST), Turquía -- 265.4\n2. Londres-Heathrow (LHR), Reino Unido -- 246.2\n3. Ámsterdam-Schiphol (AMS), Países Bajos --242.7\n4. Kuala Lumpur (KUL), Malasia -- 232.1\n5. Chicago-O’Hare (ORD), Estados Unidos -- 232.1\n6. Seúl-Incheon (ICN), Corea del Sur -- 221.7\n7. Fráncfort (FRA), Alemania -- 218.4\n8. Tokio-Haneda (HND), Japón -- 217.4\n9. París-Charles de Gaulle (CDG), Francia -- 210.1\n10. Atlanta (ATL), Estados Unidos -- 190.7\n• Índice de conectividad de OAG, 2026. Los valores no representan porcentajes ni cantidades de vuelos.\n¿Cómo se mide la conectividad?\nPara elaborar su clasificación, OAG identifica las conexiones posibles entre vuelos de llegada y salida dentro de una ventana de seis horas, siempre que al menos uno sea internacional.\nDespués, relaciona el número de conexiones potenciales con la cantidad de destinos atendidos por cada aeropuerto entre septiembre de 2025 y agosto de 2026. El índice expresa cuántas oportunidades de conexión ofrece un aeropuerto en relación con el tamaño de su red de destinos.\nAsí, un valor más alto indica una mayor conectividad según la metodología de OAG, pero no representa un porcentaje ni la cantidad de pasajeros o vuelos realizados.\nEstambul conquista el primer lugar\nEl Aeropuerto de Estambul ascendió del segundo puesto en 2025 al primero en 2026. Su red alcanza 337 destinos y registró 89,456 conexiones potenciales durante la jornada analizada.\nTurkish Airlines concentra el 80% de su capacidad, una participación que refleja el papel de la aerolínea en la organización de conexiones entre Europa, Asia, África y otros mercados.\nLondres-Heathrow descendió al segundo lugar, mientras Ámsterdam conservó el tercero. Chicago-O’Hare avanzó hasta la quinta posición y se convirtió en el aeropuerto mejor conectado del continente americano.\nAmérica Latina: Bogotá encabeza la región\nCuatro aeropuertos latinoamericanos aparecen entre los 50 mejor conectados del mundo. Bogotá ocupa la posición más alta, tras avanzar del puesto 16 al 13.\n13. Bogotá-El Dorado (Colombia) -- 172.4\n34. Panamá-Tocumen (Panamá) -- 116.9\n39. Ciudad de México (México) -- 102.9\n47. São Paulo-Guarulhos (Brasil) -- 88.1\n• Los números corresponden a las posiciones en el ranking mundial.\n• El aeropuerto de Tocumen destaca por la concentración de operaciones de Copa Airlines, responsable del 91% de sus vuelos, la mayor participación de una aerolínea dominante entre los centros latinoamericanos analizados.\nLAS CLAVES\n• OAG analizó 201 aeropuertos para elaborar su índice Megahubs 2026.\n• Estambul desplazó a Londres-Heathrow del primer lugar mundial.\n• Bogotá avanzó tres posiciones y alcanzó el puesto 13.\n• La conectividad depende de las combinaciones posibles entre vuelos, no solo del número de pasajeros.",
+        "autor": "Said Pulido",
+        "imagen_url": "https://www.publimetro.cl/resizer/v2/BX53K5LNKJAVHHJ24G624YA6VE.jpg?smart=true&auth=1e4fcfa48d1164ec5a316d84a6c3ac615ecf723c0807f18221f8f0283f40f688&width=1200&height=630",
+        "fecha_extraccion": "2026-10-19T02:51:44.048622"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 0,
+      "Center": 1,
+      "Right": 0
+    }
+  },
+  {
+    "evento_id": "b6c53aca-d763-4a23-9f93-eb1295b5ebf7",
+    "noticias": [
+      {
+        "medio_id": "6",
+        "sesgo_politico": "Center",
+        "url": "https://www.publimetro.cl/noticias/2026/10/16/otorgan-libertad-condicional-a-patricio-maturana-excarabinero-condenado-en-el-caso-fabiola-campillai/",
+        "titulo": "Otorgan libertad condicional a Patricio Maturana, excarabinero condenado en el caso Fabiola Campillai",
+        "cuerpo": "La Comisión de Libertad Condicional de Talca acogió de manera unánime la solicitud presentada por la defensa de Patricio Maturana Ojeda, exoficial de Carabineros recluido en el Centro de Cumplimiento Penitenciario de Molina.\nEl beneficio penal permitirá al condenado abandonar el recinto presidio una vez que alcance el lapso mínimo legal exigido por la normativa chilena. Según consta en la resolución judicial, el documento fija expresamente que: “El solicitante gozará del beneficio que por esta resolución se otorga, una vez que cumpla el tiempo mínimo, esto es, a partir del día 2 de diciembre de 2026”.\nLos argumentos de Fabiola Campillai y la resolución de la comisión\nAntes de la resolución, la senadora Fabiola Campillai compareció en persona y por escrito ante el tribunal administrativo para manifestar su rechazo a la concesión de la libertad condicional.\nEn su exposición, la legisladora argumentó la exigencia de cumplir al menos dos tercios de la pena, cuestionó la falta de arrepentimiento o disculpas públicas por parte del agresor y advirtió sobre el impacto en su seguridad e integridad psíquica.\nLos hechos se remontan al 26 de noviembre de 2019 en San Bernardo, cuando la víctima recibió el impacto directo de una bomba lacrimógena en el rostro mientras se dirigía a su trabajo, sufriendo la pérdida definitiva de la visión, el gusto y el olfato.\nSin embargo, la instancia desestimó los planteamientos de la parlamentaria. La comisión precisó que la exigencia legal aplicable corresponde a la mitad de la condena, debido a que el ilícito imputado no figura en el catálogo de delitos que requieren dos tercios de cumplimiento.\nAsimismo, el organismo enfatizó que la sentencia condenatoria dictada por la justicia descartó expresamente calificar la acción como un “crimen de lesa humanidad”.\nEl informe de Gendarmería y el contexto judicial\nLa determinación de los comisionados se respaldó en el informe psicosocial elaborado por Gendarmería, el cual asignó un riesgo de reincidencia “muy bajo” y destacó la conducta intachable del interno. En el documento técnico se concluyó que:\n“El postulante evidencia actualmente una adecuada asunción de responsabilidad, reconocimiento del impacto de sus actos y rechazo explícito de la conducta delictiva, manifestando disposición sostenida a mantener un comportamiento ajustado a las normas sociales”. La comisión añadió que no existen antecedentes de amenazas ni comunicaciones dirigidas hacia la víctima.\nEste fallo se dicta a días de un nuevo aniversario del 18 de octubre, periodo marcado por el debate público sobre derechos humanos, sumado a las presiones hacia el presidente José Antonio Kast para otorgar indultos a uniformados.",
+        "autor": "Sebastian Huerta Viurcos",
+        "imagen_url": "https://www.publimetro.cl/resizer/v2/JA4GKV23INHHHPVJAHKTP3OJEY.png?smart=true&auth=0bca35d9d7dfec707d99c55e5012c502b0ca0457d412dd7a28ab5a98de7e1165&width=1200&height=630",
+        "fecha_extraccion": "2026-10-19T02:51:47.588230"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 0,
+      "Center": 1,
+      "Right": 0
+    }
+  },
+  {
+    "evento_id": "fad3d2e2-88bf-4fe0-880e-2d85a88acf10",
+    "noticias": [
+      {
+        "medio_id": "6",
+        "sesgo_politico": "Center",
+        "url": "https://www.publimetro.cl/noticias/2026/10/16/cura-argentino-que-promueve-charlas-para-salir-de-la-homosexualidad-expondra-en-la-cumbre-expofamily-2026/",
+        "titulo": "Cura argentino que promueve charlas para “salir” de la homosexualidad expondrá en la cumbre Expofamily 2026",
+        "cuerpo": "El sacerdote y abogado argentino Javier Olivera Ravasi será una de las figuras internacionales que intervendrá en Expofamily 2026, cumbre programada para este sábado 17 de octubre en el centro de eventos Centro Parque, ubicado en el Parque Araucano de Las Condes.\nLa actividad, impulsada por Chema Librería, busca promover una visión de la estructura familiar definida por sus organizadores como integrada por padre, madre e hijos.\nDentro de la programación del evento, el religioso, quien además es doctor en Filosofía e Historia y fundador del canal de divulgación Que no te la cuenten, encabezará una ponencia fijada entre las 12:00 y las 13:00 horas, la cual lleva por título “La educación cristiana de los hijos”. La cumbre contempla abordar temáticas como la educación sexual, la disforia de género y la denominada “batalla cultural”.\nLas controversias del sacerdote por sus publicaciones sobre la homosexualidad\nLa participación de Javier Olivera Ravasi en Chile generó atención mediática debido a sus intervenciones públicas en plataformas digitales, donde ha difundido contenidos respecto a que la homosexualidad sería una condición de la que es posible salir mediante la fe cristiana.\nEn junio de 2024, el religioso publicó en su plataforma un espacio titulado “¿Se puede salir de la homosexualidad? Testimonios de ‘transformados’”, dando espacio a personas que afirmaban haber dejado atrás prácticas homosexuales para acercarse al cristianismo.\nAsimismo, el sacerdote ha compartido mensajes de padres sobre modificaciones de comportamientos en sus hijos asociadas a tendencias homosexuales, planteamientos que lo situaron en el centro de cuestionamientos por abordar la diversidad sexual desde una perspectiva religiosa.\nEl vínculo con exmilitares en Argentina y las figuras políticas invitadas\nA las controversias por sus publicaciones sobre la diversidad sexual se suma un episodio político registrado en julio de 2024 en Argentina. En esa oportunidad, Olivera Ravasi fue señalado como uno de los gestores de la visita de diputados del partido La Libertad Avanza a exmilitares condenados por crímenes de lesa humanidad en la cárcel de Ezeiza. Tras el hecho, la Iglesia católica argentina tomó distancia de sus actuaciones y fue apartado de sus funciones pastorales en la diócesis de Zárate-Campana.\nEl encuentro en Las Condes cuenta con el respaldo de referentes de la derecha chilena como José Kast Adriasola, Johannes Kaiser y la exministra Mara Sedini, sumado a ponentes internacionales como el escritor Agustín Laje y el estadounidense Tim Ballard.",
+        "autor": "Sebastian Huerta Viurcos",
+        "imagen_url": "https://www.publimetro.cl/resizer/v2/AZWCGYIYMBD4FKLYHNH4UAT6VQ.jpg?smart=true&auth=e2c1ba0cb8b096232687a7f9bbefac2e0921b931a434ac0cbfa10a8087069dbf&width=1200&height=630",
+        "fecha_extraccion": "2026-10-19T02:51:50.798933"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 0,
+      "Center": 1,
+      "Right": 0
+    }
+  },
+  {
+    "evento_id": "271cd551-5a60-4b23-8c0c-7c94ff6777fc",
+    "noticias": [
+      {
+        "medio_id": "6",
+        "sesgo_politico": "Center",
+        "url": "https://www.publimetro.cl/noticias/2026/10/19/proponen-suspender-disposiciones-de-la-ley-karin-que-cambiaria-si-te-humillan-o-acosan-en-el-trabajo/",
+        "titulo": "Proponen suspender disposiciones de la Ley Karin: ¿qué cambiaría si te humillan o acosan en el trabajo?",
+        "cuerpo": "Recibir amenazas de una jefatura, enfrentar descalificaciones constantes o sufrir una humillación durante una reunión plantea preguntas concretas: ¿puedo denunciar?, ¿debo esperar a que vuelva a ocurrir?, ¿cómo me protejo mientras sigo trabajando? El proyecto que propone suspender temporalmente algunas disposiciones de la Ley Karin abre un debate sobre cómo podrían tratarse estas situaciones.\nLa iniciativa, correspondiente al boletín N.º 18.588-13, propone suspender por cinco años, desde la publicación de una eventual ley, los efectos de disposiciones introducidas por la Ley 21.643 al Código del Trabajo en materia de prevención, investigación y sanción del acoso laboral, sexual y la violencia en el trabajo, además de las normas dictadas para ejecutarlas. Durante ese período, el proyecto dispone que regirían las normas anteriores a la entrada en vigencia de la Ley Karin.\nLa presentación del proyecto no modifica por sí sola la legislación vigente, mientras no se publique una eventual ley, siguen rigiendo los canales de denuncia y las obligaciones actuales de protección. El proyecto también establece que los procedimientos iniciados antes de esa publicación continuarían bajo la normativa vigente al momento de su inicio, hasta su término.\nMe humillaron una vez frente a mis compañeros: ¿qué cambiaría?\nHoy, una conducta puede constituir acoso laboral aunque ocurra una sola vez, si consiste en una agresión u hostigamiento y tiene como resultado menoscabo, maltrato o humillación, o amenaza o perjudica la situación laboral o las oportunidades de empleo de la persona afectada. Que haya existido una humillación o una amenaza no significa, por sí solo, que se configure acoso: deben analizarse los hechos y sus efectos.\nSi se restableciera la definición anterior, volvería a exigirse que la agresión u hostigamiento fueran reiterados para configurar acoso laboral. Pero que una conducta aislada no reúna los requisitos de esa definición no significa que esté permitida ni que carezca necesariamente de otras consecuencias: según los hechos, podría afectar derechos como la integridad física o psíquica y la honra, protegidos por la Constitución y considerados en el procedimiento de tutela laboral.\n“Que una conducta no reúna los requisitos de una determinada definición de acoso no significa que la persona deba soportarla, lo importante es revisar qué ocurrió, cómo la afectó y qué herramienta corresponde utilizar para proteger sus derechos”, explica Pedro Peña, abogado experto en derecho laboral y socio del estudio jurídico SoyTrabajador.\nEl hostigamiento lleva meses: ¿seguiría pudiendo denunciar?\nLa protección frente al acoso laboral existía antes de la Ley Karin, y la definición anterior contemplaba conductas reiteradas. Por eso, volver a ese régimen no eliminaría toda posibilidad de reclamar frente a hostigamientos persistentes, aunque sí podrían cambiar las herramientas específicas de prevención, investigación y protección incorporadas por la reforma.\nMientras rige la normativa actual, las personas sujetas al Código del Trabajo pueden denunciar verbalmente o por escrito ante el empleador o la Inspección del Trabajo. Si la denuncia es verbal, quien la recibe debe levantar un acta, que firma la persona denunciante, y entregarle una copia. Registrar fechas, describir los episodios y conservar mensajes u otros antecedentes disponibles puede ayudar a explicar lo ocurrido.\nYa denuncié y sigo trabajando con esa persona: ¿qué pasaría?\nEl proyecto no propone cerrar automáticamente las investigaciones pendientes: establece que los procedimientos iniciados antes de la publicación de una eventual ley seguirían rigiéndose por la normativa vigente al momento de su inicio, hasta finalizar. Los cinco años de suspensión se contarían desde la publicación de esa eventual ley.\nMientras se mantenga vigente la normativa actual, si la denuncia se presenta al empleador, este debe adoptar de inmediato las medidas de resguardo necesarias, considerando la gravedad de los hechos, la seguridad de la persona denunciante y las condiciones de trabajo. Si se presenta ante la Inspección del Trabajo, esta solicitará al empleador una o más medidas dentro de un máximo de dos días hábiles, que deberán adoptarse inmediatamente una vez notificadas. Entre las medidas posibles están separar los espacios físicos, redistribuir los horarios y proporcionar atención psicológica temprana mediante el organismo administrador del seguro de accidentes del trabajo.\n“Presentar una denuncia no resuelve por sí solo la exposición al problema, si la persona continúa compartiendo espacio con quien denunció y teme nuevas agresiones, debe comunicar esa situación y solicitar protección. Esas medidas buscan resguardar durante la investigación y no equivalen a una sanción anticipada”, señala Peña.",
+        "autor": "Nicole Villanueva",
+        "imagen_url": "https://www.publimetro.cl/resizer/v2/7I7RNBHBIZDALLINGC7QFZRBVU.jpg?smart=true&auth=719a78eb59e4185052dd0d7a4bee85ae9b0ab6d499f524e31490746cb9084d06&width=1200&height=630",
+        "fecha_extraccion": "2026-10-19T02:51:53.662684"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 0,
+      "Center": 1,
+      "Right": 0
+    }
+  },
+  {
+    "evento_id": "cd2c3ad6-4f99-426b-aacc-d1726004017e",
+    "noticias": [
+      {
+        "medio_id": "6",
+        "sesgo_politico": "Center",
+        "url": "https://www.publimetro.cl/noticias/2026/10/18/vicepresidente-del-ppd-reivindicar-las-demandas-sociales-del-estallido-es-necesario-la-violencia-nunca-sera-el-camino/",
+        "titulo": "Vicepresidente del PPD: “Reivindicar las demandas sociales del estallido es necesario; la violencia nunca será el camino”",
+        "cuerpo": "A siete años del estallido social del 18 de octubre de 2019, el vicepresidente nacional del Partido por la Democracia (PPD), Fernando Bórquez, llamó a retomar la discusión sobre las demandas que estuvieron detrás de las movilizaciones, aunque marcando una clara distancia con los hechos de violencia registrados durante ese período.\n“Chile no puede seguir evitando la discusión de fondo sobre el estallido social de octubre de 2019. Las expresiones de violencia que marcaron ese período deben ser condenadas con claridad, pero no pueden convertirse en una excusa para desconocer las legítimas demandas sociales que llevaron a millones de personas a manifestarse”, sostuvo.\nSegún el dirigente, la discusión adquiere especial relevancia en medio del debate por el Presupuesto 2027, actualmente una de las principales discusiones económicas y políticas del país. El proyecto corresponde al primer Presupuesto de la administración del Presidente José Antonio Kast.\n“Tenemos que distinguir entre las demandas sociales y la violencia”\nBórquez sostuvo que parte de las problemáticas que motivaron las movilizaciones de 2019 continúan presentes y llamó a no equiparar esas demandas con los episodios de violencia ocurridos durante el estallido.\n“Tenemos que ser capaces de distinguir entre las demandas sociales y los hechos de violencia. La violencia deslegitima las causas, destruye la confianza y perjudica la convivencia democrática. No la justificamos ni la aceptamos”, afirmó.\nSin embargo, agregó que el rechazo a esos hechos tampoco debería, a su juicio, desplazar del debate asuntos como “mejores pensiones, salud oportuna, educación de calidad, mayor seguridad económica y una sociedad con más oportunidades y menos desigualdad”.\nBórquez pone el foco en el Presupuesto 2027\nEl vicepresidente del PPD planteó que la discusión presupuestaria debe servir para revisar las prioridades del país y determinar si los recursos públicos están respondiendo a las principales necesidades de las familias.\n“Un presupuesto no es solamente una planilla de ingresos y gastos: es una definición política sobre qué país queremos construir y a quiénes queremos priorizar”, señaló.\nEn esa línea, llamó a la oposición y a su propio partido a poner las demandas sociales pendientes en el centro de sus planteamientos frente al proyecto, exigiendo respuestas concretas y revisando los recursos destinados a ellas.\nFinalmente, Bórquez insistió en que recuperar esas demandas no significa validar los episodios de violencia ocurridos a partir del 18 de octubre de 2019.\n“Reivindicar las demandas sociales no significa reivindicar la violencia. Significa reconocer que detrás de millones de ciudadanos que salieron a las calles había problemas reales que la política debe enfrentar”, aseguró.\n“El desafío es transformar ese malestar en propuestas, políticas públicas y mejores condiciones de vida para las personas. Esa debe ser una de las prioridades de la oposición y del PPD frente al Presupuesto 2027”, concluyó.",
+        "autor": "Publimetro",
+        "imagen_url": "https://www.publimetro.cl/resizer/v2/PIPKAPHC4RCMPH3G7Q63DGG64M.jpeg?smart=true&auth=ac6d574699e68b1c16879c154e7b6b18cb28eb3fa099d6d4bd68c87c0842b6c7&width=1200&height=630",
+        "fecha_extraccion": "2026-10-19T02:51:56.569094"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 0,
+      "Center": 1,
+      "Right": 0
+    }
+  },
+  {
+    "evento_id": "3fa51a34-2fb3-4938-8a7b-0d790117d3ab",
+    "noticias": [
+      {
+        "medio_id": "8",
+        "sesgo_politico": "Left",
+        "url": "https://www.elciudadano.com/actualidad/prensa-alemana-analiza-historica-caida-de-popularidad-de-kast-problemas-de-gestion-promesas-incumplidas-y-recortes-sociales/10/18/",
+        "titulo": "Prensa alemana analiza histórica caída de popularidad de Kast: Problemas de gestión, promesas incumplidas y recortes sociales",
+        "cuerpo": "Agencia alemana DW analiza las razones tras la caída de popularidad de Kast\nA solo siete meses de haber asumido la presidencia, José Antonio Kast enfrenta una caída de popularidad sin precedentes recientes en Chile, que fue noticia durante la semana reciente tras la publicación de un análisis de la cadena alemana DW, firmado por Victoria Dannemann. Según la encuesta Criteria que analiza del fin de semana pasado, el mandatario registró el peor nivel de aprobación, un 27%, mientras que la desaprobación alcanza el 64%. Un 82% de los encuestados estima que el gobierno ha estado por debajo de las expectativas.\nEl académico Marcelo Mella, director del Departamento de Estudios Políticos de la Universidad de Santiago de Chile (USACH), señaló al medio: «Los números son bien sorprendentes, porque lo habitual en Chile es que el desgaste se materialice al segundo año. El presidente Kast lleva siete meses y muestra una caída en las principales encuestas. Es un fenómeno bastante inédito».\nPara Claudia Heiss, académica de la Facultad de Gobierno de la Universidad de Chile, la caída se explica por una «sensación de mala gestión». «Se ha visto que este gobierno no tiene experiencia política y ha generado descontento, no solo en la oposición. No ha dado garantías de gobernabilidad ni de capacidad técnica. Eso afecta su legitimidad, incluso dentro de los sectores más cercanos. Es revelador que en las encuestas cae mucho el apoyo de los votantes de derecha», declaró a DW.\nMella agregó que «a los siete meses, el presidente Kast tiene más desaprobación que la que tuvo el presidente Boric después de la derrota del plebiscito de salida del primer proceso constituyente».\nEntre los factores que explican el desplome, DW destacó la decisión de no construir un gobierno de coalición. Mella explicó que «en Chile, los gobiernos que tienen buenos resultados necesariamente son de coalición, porque su sistema político es de una fragmentación extrema». A esto se suma un «gabinete con ministros inexpertos y no conscientes del costo de los recortes de programas sociales», errores de primerizos, nombramientos cuestionados, rotación de cargos y problemas de diálogo con el Congreso.\nEl análisis también vinculó la impopularidad con el incumplimiento de las promesas de campaña: la percepción de inseguridad aumentó —un 53% cree que la delincuencia ha crecido en los últimos seis meses, frente al 40% de agosto— y las soluciones ofrecidas no han sido las esperadas. «Las políticas públicas se construyen a través del tiempo y pueden ofrecer soluciones graduales, pero las soluciones mágicas no son reales, son una ilusión», señaló Heiss.\nEl reportaje también abordó el impacto de los recortes en programas sociales y el alza de bencinas. «En el contexto actual de estancamiento económico, una serie de recortes en programas sociales y situaciones como el alza de las bencinas -que el gobierno decidió no mitigar, sino que traspasó el alto costo a los consumidores-, se imponen al discurso de que el ajuste es bueno en el largo plazo», advirtió Heiss. Y añadió: «La experiencia cotidiana de las personas es que aumenta el desempleo, aumenta el costo de la vida, los salarios no mejoran, y además se anuncian recortes de beneficios sociales que, en un contexto como el actual, es una receta para la impopularidad». El gobierno ha decretado recortes en salud, educación, ciencia, cultura, becas, bonos y subsidios, además del fin del programa que entregó computadoras a escolares durante 17 años.",
+        "autor": "Seguel Alfredo",
+        "imagen_url": "https://www.elciudadano.com/wp-content/uploads/2026/10/caida-popularidad-kast.jpg",
+        "fecha_extraccion": "2026-10-19T02:52:01.365149"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 1,
+      "Center": 0,
+      "Right": 0
+    }
+  },
+  {
+    "evento_id": "eb4de223-f7e1-4ec7-b179-878e6360f7da",
+    "noticias": [
+      {
+        "medio_id": "8",
+        "sesgo_politico": "Left",
+        "url": "https://www.elciudadano.com/editorial/nueva-conmemoracion-del-18-o-de-la-revuelta-popular-a-la-restauracion-pinochetista/10/18/",
+        "titulo": "Nueva conmemoración del 18-O: De la Revuelta Popular a la Restauración Pinochetista",
+        "cuerpo": "El 18 de octubre fue un golpe a la cátedra. Nadie apostaba por el pueblo y ahí estuvo deslumbrando: movilizado durante meses, con marchas, barricadas y bailes, a lo largo y ancho de todo el país. No hubo conducción, pero sí una multiplicidad de organizaciones constituidas y miles que se constituyeron al calor de la lucha capaces de convocar en sus espacios territoriales e incluso se autoconvocaron a la marcha más grande de la historia contemporánea de Chile, con más de un millón de personas concentradas en la Alameda.\nSe ha discutido bastante sobre las razones de la movilización: un movimiento antineoliberal de impugnación al régimen de los últimos 30 años; una expresión del hastío generado por las promesas incumplidas del sistema; una rabia en contra de la corrupción y las desigualdades. Puede que haya algo de verdad en todo ello. No hubo un momento de deliberación colectiva o espacio de síntesis – más allá de los cabildos ciudadanos – y sabemos que la opinión de las personas va cambiando a lo largo de los años: no es necesario que esté de acuerdo conmigo mismo, como diría el gran Carlos Caszely.\nLo cierto es que en la Revuelta Popular, como suele ocurrir en las revueltas, predominó la energía destituyente de lo existente, más allá del grado de conciencia detrás de la persona movilizada. Y las condiciones materiales son evidentes: profundas desigualdades donde el 1% de la población concentra más del 50% de la riqueza del país; altos niveles de endeudamiento, incluso para comer y estudiar; pensiones de miseria que no son suficientes para un nivel de vida digno; largas listas de espera para acceder a la salud; permanentes alzas en el costo de la vida, incluyendo tarifas básicas de luz, agua y transporte; dificultades en el acceso a la vivienda, incluso para las generaciones de jóvenes profesionales; entre otras situaciones que demuestran en la cotidianeidad que el sistema no funciona para las grandes mayorías del país.\nY esa energía destituyente que se expresó en las formas más creativas y destructivas sigue ahí. Y como toda energía, no se destruye, solo se transforma. Un primer intento de canalización fue el itinerario definido en el “Acuerdo por la Paz y la Nueva Constitución”, el cual fue impuesto en el contexto de la pandemia y que terminó con el plebiscito del 4 de septiembre de 2022. Un segundo intento, mucho más deslucido, fue el segundo proceso constitucional que se extendió durante todo el año 2023, allí la energía destituyente, contenida, sólo se expresó votando por los consejeros constitucionales republicanos, quienes tuvieron la mayoría del órgano constitucional.\nY el tercero intento de canalización ocurrió con la votación de Kast en las últimas elecciones presidenciales. Sin embargo, a menos de un año de gobierno ya se da por frustrado. Las malas cifras económicas, las falsas expectativas en materia de seguridad y las mentiras en políticas de migración y de recortes sociales han provocado una desafección meteórica. En 7 meses la aprobación es inferior a un 30% y las tasas de rechazo al gobierno a lo menos doblan a la población que lo aprueba.\nEsta restauración pinochetista se ha expresado en una reforma tributaria hecha a la medida de los súperricos; una retórica de enemigo interno y un primer intento fallido de reformar la Constitución otorgando poderes omnipotentes al Presidente para declarar un estado de excepción constitucional de seguridad pública y también una retórica conservadora en materia de derechos de las mujeres y de derechos sexuales y reproductivos.\nTambién tiene una expresión en la impunidad para los violadores de los derechos humanos, donde el discurso mezcla el indulto para responsables por crímenes de lesa humanidad durante la dictadura militar con el indulto a aquellos condenados por apremios ilegítimos y tortura durante la Revuelta Popular.\nLa energía destituyente de octubre de 2019 aún está en forma de rabia y frustración, almacenada al interior de los hogares, pero las medidas anti-pueblo aplicadas por José Kast podrían ser la chispa para encender nuevamente la pradera. Las juventudes a nivel mundial están saliendo a las calles en contra de las políticas neoliberales, por lo cual no se puede descartar que ocurra lo mismo en nuestro país solo por el hecho de que la Revuelta Popular no se expresó en un triunfo para el pueblo trabajador.\nTal como anunciábamos en la editorial del año pasado, Chile sigue en un periodo de interregnum, donde lo viejo no termina de morir y lo nuevo no termina de nacer. Si, como metáfora, señalábamos que 2019 era nuestro 1905, hay que prepararse para liderar un 1917. El viejo topo de la historia siempre vuelve a emerger para ver la luz del sol.",
+        "autor": "Javier Pineda",
+        "imagen_url": "https://www.elciudadano.com/wp-content/uploads/2024/10/estallido-imagen.jpg",
+        "fecha_extraccion": "2026-10-19T02:52:03.719817"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 1,
+      "Center": 0,
+      "Right": 0
+    }
+  },
+  {
+    "evento_id": "f018a73e-3194-4a68-8dd1-e9c02c3e00d2",
+    "noticias": [
+      {
+        "medio_id": "8",
+        "sesgo_politico": "Left",
+        "url": "https://www.elciudadano.com/actualidad/consulta-nacional-elige-el-nombre-voluntad-para-chile-el-nuevo-movimiento-politico-que-se-define-de-arraigo-popular-y-vocacion-patriotica/10/17/",
+        "titulo": "Consulta nacional elige el nombre \"Voluntad para Chile\": el nuevo movimiento político que se define de arraigo popular y vocación patriótica",
+        "cuerpo": "Voluntad para Chile: consulta nacional define el nombre del nuevo movimiento de “arraigo popular y vocación patriótica”\nEl pasado fin de semana se llevó a cabo una consulta interna a nivel nacional que contó con una masiva participación en diversas regiones del país, proceso en el cual la opción Voluntad para Chile fue elegida por una amplia mayoría para denominar formalmente a este referente político en formación. Impulsado por un entramado de dirigencias comunales, regionales y sociales, el proyecto busca estructurar una alternativa basada en la organización comunitaria, la identidad del trabajo y el desarrollo nacional. El movimiento se plantea como una respuesta al distanciamiento entre las instituciones públicas tradicionales y las demandas cotidianas de los barrios y regiones del país, buscando posicionar su acción pública con un enfoque en el mundo popular más allá del eje tradicional del status quo.\nLa iniciativa, que contempla la entrega inicial de una nómina de 100 militantes fundadores ante el Servicio Electoral (Servel) a mediados de noviembre para iniciar el período legal de recolección de firmas de 210 días, cuenta entre sus principales promotores con el alcalde de Puente Alto, Matías Toledo, una de las figuras articuladoras y fundamentales del proyecto.\nConexión directa con la vida concreta y las comunidades\nDesde las dirigencias sociales de base que componen la mesa provisional, la vocera del Movimiento de Pobladores en Lucha (MPL), Natalia Garrido, detalló los objetivos fundacionales del referente, resaltando el arraigo local y la representatividad que persiguen:\n«Voluntad para Chile nace con una impronta territorial y comunitaria, queremos construir un referente que conecte la política con la vida concreta de las personas y con quienes todos los días habitan sus barrios y comunidades».\n«Buscamos representar a pobladoras, trabajadores, mujeres, intelectuales, profesionales, juventudes, dirigencias sociales y a todas y todos aquellos que muchas veces sienten que sus problemas quedan lejos de los espacios donde se toman las decisiones, personas que se sienten excluidas. Nuestra apuesta es construir una política con los territorios, en las poblaciones, universidades, en el trabajo y en todo lugar donde exista la voluntad de construir un país más justo».\nTransversalidad, trabajo e institucionalidad\nPor su parte, la concejala Constanza Maldonado —estrecha colaboradora del alcalde Matías Toledo en la labor municipal y social de Puente Alto— abordó la composición del proyecto y sus metas institucionales, enfatizando el carácter nacional, soberano y transversal de la propuesta:\n«Voluntad para Chile busca representar una identidad trabajadora, democrática, solidaria, arraigada en la clase trabajadora chilena, en su historia de organización y en la diversidad de nuestros territorios. Idealmente que convoque a trabajadores del campo y la ciudad, sectores medios, comunidades a construir un Chile más justo y soberano, uniendo la organización social con la acción política e institucional, con el propósito de avanzar en la garantía de las condiciones básicas de la subsistencia de nuestro país».\nDespliegue regional y definición orgánica\nEn el ámbito institucional y de dirección, el proyecto ya ha confirmado la incorporación de autoridades de representación popular en sus vicepresidencias. Entre ellos se encuentra el gobernador regional de Valparaíso, Rodrigo Mundaca, quien se refirió a los avances en la confección de los estatutos y la estructura interna del referente:\n«Ya somos una orgánica que se está produciendo, trabajando en una propuesta de estructura orgánica y de funcionamiento».\nEn la misma línea orgánica, el alcalde de La Cisterna, Joel Olmos, quien también asumirá una de las vicepresidencias de la directiva, repasó las convergencias políticas que se han sumado al proceso de conformación y el itinerario legal contemplado:\n«Se han sumado colectividades importantes, como la Izquierda Cristiana y el movimiento Firmes x Chile, y han mostrado interés liderazgos como el exdiputado Jaime Naranjo».\n«Para mediados de noviembre esperamos comenzar el trámite de formalización de Voluntad para Chile en el Servicio Electoral, con los 100 militantes fundadores, y abocarnos a la tarea de pasar de un partido en formación a uno legalmente constituido. La tarea será ardua, pero la lograremos».\nEl referente contempla además el acompañamiento de figuras públicas e institucionales como la senadora por la Región Metropolitana, Fabiola Campillai y una decena de concejales entre otros referentes sociales. Con su formalización ante el Servel fijada para las próximas semanas, Voluntad para Chile iniciará su fase de despliegue territorial para constituirse formalmente a nivel nacional.",
+        "autor": "El Ciudadano",
+        "imagen_url": "https://www.elciudadano.com/wp-content/uploads/2026/10/Voluntad-para-Chile-PORTADA.jpg",
+        "fecha_extraccion": "2026-10-19T02:52:06.654949"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 1,
+      "Center": 0,
+      "Right": 0
+    }
+  },
+  {
+    "evento_id": "e5600cf9-a847-4477-854e-51650ec0167f",
+    "noticias": [
+      {
+        "medio_id": "8",
+        "sesgo_politico": "Left",
+        "url": "https://www.elciudadano.com/actualidad/la-impunidad-erosiona-la-confianza-en-las-instituciones-democraticas-voluntad-para-chile-apoya-a-senadora-fabiola-campillai-ante-otorgamiento-de-libertad-condicional-a-su-agresor/10/18/",
+        "titulo": "“La impunidad erosiona la confianza en las instituciones democráticas\": Voluntad para Chile apoya a senadora Fabiola Campillai ante otorgamiento de libertad condicional a su agresor",
+        "cuerpo": "Voluntad para Chile expresa su «más profundo apoyo, solidaridad y cariño» a la senadora Fabiola Campillai\nEl movimiento Voluntad para Chile emitió una declaración pública en la que expresa su «más profundo apoyo, solidaridad y cariño» a su compañera, la senadora Fabiola Campillai, ante la decisión de la Comisión de Libertad Condicional de Talca de otorgar este beneficio a Patricio Maturana, exfuncionario de Carabineros condenado a 12 años y 183 días de presidio por la agresión que le provocó la pérdida de la visión, gusto y olfato.\nLa organización manifestó su «grave preocupación» por el otorgamiento de beneficios penitenciarios a agentes del Estado condenados por graves violaciones a los derechos humanos, «especialmente cuando, según los antecedentes que se han dado a conocer, no han cumplido siquiera la mitad de sus condenas». Para Voluntad para Chile, esta decisión «se inscribe en un contexto en el que las víctimas de violencia institucional y sus familias continúan enfrentando obstáculos para alcanzar justicia».\nEn ese sentido, el movimiento advirtió que «la impunidad, ya sea por la falta de sanción efectiva o por decisiones que debilitan el sentido de las condenas, profundiza la impunidad y erosiona la confianza en las instituciones democráticas». Y agregó que esta resolución «puede sentar un mal precedente para las demás víctimas de violencia institucional en Chile», subrayando que «la justicia debe considerar la gravedad de los hechos, la responsabilidad de quienes ejercieron violencia desde el poder del Estado y la necesidad de evitar que los beneficios penitenciarios sean percibidos como una forma de minimizar las consecuencias de estas agresiones».\nEn el marco de una nueva conmemoración de la Revuelta Popular, Voluntad para Chile expresó «toda nuestra fuerza, solidaridad y cariño» a la senadora Campillai, señalando que «su lucha nos inspira y representa la dignidad de quienes han exigido verdad y justicia frente a la violencia estatal, y nos recuerda que las consecuencias de las violaciones a los derechos humanos permanecen mucho después de ocurridos los hechos».\nFinalmente, la organización reafirmó que «el compromiso con la democracia es inseparable con la defensa irrestricta de los derechos humanos» y aseguró que «seguiremos acompañando a la Senadora Fabiola Campillai y a todas las víctimas de violencia institucional».",
+        "autor": "El Ciudadano",
+        "imagen_url": "https://www.elciudadano.com/wp-content/uploads/2026/10/fabiola-campillai.jpg",
+        "fecha_extraccion": "2026-10-19T02:52:09.373417"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 1,
+      "Center": 0,
+      "Right": 0
+    }
+  },
+  {
+    "evento_id": "e12121e5-566c-48c6-b8db-cf55e0bea6ba",
+    "noticias": [
+      {
+        "medio_id": "8",
+        "sesgo_politico": "Left",
+        "url": "https://www.elciudadano.com/actualidad/18-o-las-seis-demandas-estructurales-que-hace-siete-anos-sacaron-a-millones-a-la-calle-por-justicia-y-dignidad/10/18/",
+        "titulo": "18-O: las seis demandas estructurales que hace siete años sacaron a millones a la calle por justicia y dignidad",
+        "cuerpo": "«No son 30 pesos, son 30 años»\nEl 18 de octubre de 2019 Chile vivió una de las rebeliones más profundas de su historia republicana. Lo que comenzó como un rechazo de estudiantes secundarios al alza de 30 pesos en el Metro de Santiago se transformó en un clamor masivo que llevó a millones a las calles bajo consignas que resumieron décadas de malestar: «No son 30 pesos, son 30 años» y «Hasta que la dignidad se haga costumbre».\nSiete años después, esas frases siguen resonando, pero las demandas que las sustentaron continúan, en gran medida, sin respuesta.\nSeis demandas que llegaron a la calle\nLas movilizaciones instalaron en el debate público un conjunto de exigencias estructurales que el sistema político no logró procesar. La CIDH, según informe oficial, documentó que las protestas expresaron el malestar de sectores populares y medios frente a un modelo socioeconómico heredado de la dictadura que priorizó «el derecho a la propiedad privada y los intereses empresariales por sobre los derechos sociales».\nLas demandas principales fueron: el fin del sistema de AFP y pensiones dignas; mejoras profundas en la salud pública; el fin de la deuda educativa y una educación sin lógica de mercado; salarios dignos frente al alto costo de la vida; condena a la corrupción y los abusos de la élite; y un cambio constitucional que reemplazara la carta fundamental de 1980, lo que es documentado por un informe de CLACSO.\nViolaciones a los derechos humanos\nLa respuesta estatal a las manifestaciones dejó un saldo de violaciones a los derechos humanos que organismos internacionales calificaron como la peor crisis desde la dictadura. El INDH presentó querellas por miles de víctimas, y la Fiscalía registró más de 12 mil denuncias por violencia institucional cometida por agentes del Estado. Sin embargo, solo 219 de esas causas terminaron con una sentencia condenatoria; la gran mayoría fue archivada, sobreseída o no perseverada . Las víctimas de trauma ocular ascienden a 464, de las cuales 230 sufrieron algún grado de pérdida visual y dos quedaron con ceguera total bilateral.\nA siete años, la impunidad persiste como una herida abierta. Amnistía Internacional denunció que en marzo el Ministerio Público decidió no perseverar en 1.509 causas vinculadas a violaciones de derechos humanos del estallido, y que entre las que seguían vigentes, menos del 2% alcanzó sentencia condenatoria, con algunas próximas a prescribir.\nEl director del INDH, Yerko Ljubetic, fue categórico: «El Estado de Chile continúa con una grave deuda y con grandes pendientes en estas materias. Todavía sigue siendo bajísima la tasa de resultados para establecer las responsabilidades«, publica Radio Cooperativa.\nLa violencia sexual contra mujeres detenidas fue particularmente invisibilizada: de 978 querellas presentadas por el INDH, dos de cada diez denunciaron hechos de este tipo, pero ninguna terminó en condena por delito sexual, destaca así una publicación de Diario Radio UChile.\nEl relato en disputa\nA siete años, la batalla por la memoria sigue activa. El diputado de Evópoli Tomás Kast afirmó que «nos quisieron hacer creer que la violencia era necesaria para conseguir cambios sociales. Ninguna demanda social, por legítima que sea, lo justifica».\nSin embargo, otros sectores de derecha también han dimensionado los elementos de fondo del estallido, más allá del reduccionismo planteado por el diputado Kast. Evelyn Matthei, en el marcó del sexto aniversario del 18-O, reconoció que las demandas de fondo que originaron las protestas siguen vigentes: «El estallido nos dejó enseñanzas, nos dejó heridas también. Las enseñanzas es que en Chile hay demasiada inequidad aún. Hay muchos dolores. Hay personas que esperan años para que los atiendan. La calidad de la educación está mala», en una publicación en La Tercera.\nEn diciembre de 2019, tras las declaraciones de Piñera de que «lo peor ya pasó», el senador RN, Manuel José Ossandón refutó ese diagnóstico señalando que el fondo de la crisis era la inequidad, no solo la violencia: «Lo peor no solo se refiere a la violencia, que todos condenamos y ojalá desaparezca, porque el fondo de esta crisis social es mucho más que eso. Lo peor sigue instalado en nuestra sociedad, lo peor sigue siendo la inequidad y la falta de oportunidades. Eso no se ha acabado», resaltaba así Diario La República el 30 de diciembre de 2019.\nEste 2026, el director de Amnistía Chile, Rodrigo Bustos, advirtió que hay sectores que buscan imponer una narrativa donde «solo hubo actos delincuenciales comunes», borrando tanto las manifestaciones pacíficas como las violaciones a los derechos humanos.\nVer declaraciones de Bustos en Diario radio UChile",
+        "autor": "Seguel Alfredo",
+        "imagen_url": "https://www.elciudadano.com/wp-content/uploads/2026/10/18-octubre.jpg",
+        "fecha_extraccion": "2026-10-19T02:52:12.244598"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 1,
+      "Center": 0,
+      "Right": 0
+    }
+  },
+  {
+    "evento_id": "bbbafc71-b2ac-4872-b8a8-06e558c6e80b",
+    "noticias": [
+      {
+        "medio_id": "8",
+        "sesgo_politico": "Left",
+        "url": "https://www.elciudadano.com/actualidad/tv-chilena-no-informa-el-pueblo-de-estados-unidos-se-movilizo-masivamente-en-jornada-no-kings-anticipando-voto-contra-trump/10/18/",
+        "titulo": "TV Chilena no informa: El pueblo de Estados Unidos se movilizó masivamente en jornada “No Kings” anticipando voto contra Trump",
+        "cuerpo": "«No Kings: Vote Early»: Masivas marchas en EE.UU. impulsando el voto anticipado contra Trump\nMiles de mítines y marchas organizados por la red No Kings se celebraron este sábado en ciudades y comunidades de Estados Unidos para impulsar el voto anticipado de la ciudadanía contra Donald Trump y el Partido Republicano en las elecciones de medio término, fijadas para el 3 de noviembre, según consignó TeleSur.\nPor su parte, USA Today informó de que millones de personas salieron a participar en la jornada a dos semanas de los comicios, claves para determinar el control del Congreso, actualmente en poder de los republicanos. El lema de la movilización nacional ha sido «No Kings: Vote Early» (Sin Reyes, Vote Anticipadamente).\nSegún los organizadores, se llevaron a cabo cerca de 3.000 manifestaciones en todo Estados Unidos con el objetivo de fomentar la participación electoral y promover la protección de las elecciones. El objetivo es lograr una participación electoral tan históricamente alta que sea difícil para la Administración Trump alegar que hubo fraude. En un mitin en Atlanta, el concejal Michael Julian Bond pidió a la multitud que instara a otros a votar antes de las elecciones generales: «La Constitución les otorga un poder. Ese es el poder del voto», dijo, llamando a no esperar hasta el último momento.\nLa jornada, convocada en 2.500 ciudades y municipios de los 50 estados, se desarrolló en un clima de creciente tensión política, marcado por la decisión de Trump de desplegar militares en varias ciudades gobernadas por la oposición demócrata. Junto a No Kings, en la convocatoria estuvieron la Unión Estadounidense para las Libertades Civiles (ACLU), la American Federation of Teachers, Black Voters Matter Fund, Indivisible, MoveOn, Public Citizen, State Voices y Voto Latino.\nLa No Kings Coalition expresó en sus redes sociales: «Hoy, a lo largo de miles de eventos en los 50 estados y en DC, estamos convirtiendo un enorme poder popular en poder directo de votantes: emitiendo nuestro voto con antelación, elaborando nuestros planes de votación y cocreando una red nacional de estadounidenses dispuestos a defender cada voto elegible». Y agregó: «Las familias de todo el país tienen dificultades para costear la compra, la gasolina, la electricidad y el coste diario de salir adelante. Las decisiones tomadas por quienes ostentan el poder moldean nuestras vidas, nuestras comunidades y nuestro futuro. No Kings: Vote Early es el siguiente paso para recuperar nuestro poder tras un año de movilizaciones masivas», consignó TeleSur.\nVer reporte Telesur\nVer reporte Telesur\nEn la movilización en Phoenix, Arizona, el senador Rubén Gallego afirmó que «esta Presidencia, y estos republicanos, nos están enfermando y empobreciendo a todos, mientras hacen que sus amigos sean cada día más ricos». En el mismo lugar, Yassamin Ansari, demócrata por Arizona en la Cámara de Representantes, calificó la próxima elección como «la más importante de nuestras vidas» ante las políticas de deportación, la guerra en Irán, los recortes en salud y las denuncias de corrupción: «¿Estamos dispuestos a permitir que el ICE infunda miedo en comunidades de todo el país y separe a las familias, a aceptar que se prive de atención sanitaria a millones de nuestros amigos y familiares?», preguntó.\nLa jornada se produjo mientras Trump volvía a usar la criminalización de la migración para infundir miedo sobre el voto demócrata. Su Administración demandó el jueves a los funcionarios electorales de California para impedir el conteo de papeletas de voto por correo de personas que el Gobierno federal considera «probables» no ciudadanos, y el Departamento de Justicia advirtió que los funcionarios locales que las procesen podrían ser investigados penalmente. Frente a esto, los senadores Alex Padilla, Sheldon Whitehouse y Dick Durbin exigieron al fiscal general Todd Blanche que se comprometa a no confiscar papeletas ni materiales electorales antes de la certificación de los comicios.",
+        "autor": "Seguel Alfredo",
+        "imagen_url": "https://www.elciudadano.com/wp-content/uploads/2026/10/no_kings_protestas.jpg",
+        "fecha_extraccion": "2026-10-19T02:52:15.546133"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 1,
+      "Center": 0,
+      "Right": 0
+    }
+  },
+  {
+    "evento_id": "2662569d-ac5f-435a-8ae3-a14847e90136",
+    "noticias": [
+      {
+        "medio_id": "8",
+        "sesgo_politico": "Left",
+        "url": "https://www.elciudadano.com/politica/imperialismo-estadounidense-en-chile-carmona-advierte-que-embajador-judd-esta-llevando-adelante-una-provocacion-por-sus-dichos-sobre-magallanes/10/15/",
+        "titulo": "Imperialismo estadounidense en Chile: Carmona advierte que embajador Judd “está llevando adelante una provocación” por sus dichos sobre Magallanes",
+        "cuerpo": "El presidente el Partido Comunista, Lautaro Carmona, advirtió que el embajador de Estados Unidos (EE.UU.) en Chile, Brandon Judd, “está llevando adelante una provocación”, al referirse a sus dichos injerencistas sobre la soberanía nacional en el Estrecho de Magallanes.\nEl pasado 7 de octubre el representante de Washington en Santiago dijo -entre otras cosas- que si Chile quiere «un país que ayude a proteger sus derechos sobre el Estrecho de Magallanes, si quieren todas esas cosas, entonces también tendrán que trabajar con nosotros en los temas que son importantes para nosotros».\nCarmona calificó las declaraciones de Judd como una intromisión en los asuntos internos chilenos y un claro ejemplo del imperialismo estadounidense.\n“Son la evidencia de que estamos viviendo el momento más peligroso a nivel de la convivencia internacional, dada la audacia y desproporción que tiene el ejercicio de la aplicación del concepto imperialista por parte de quienes dirigen Estados Unidos”, indicó.\n«Nunca después de la Segunda Guerra Mundial había estado tan en riesgo la estabilidad de la convivencia internacional y eso es por la política injerencista, guerrerista, armamentista e imperialista que lleva adelante el presidente de EE.UU. Donald Trump y su equipo como representación de la potencia norteamericana», advirtió.\nEn opinión del presidente del Partido Comunista, el embajador estadounidense “habla a conciencia que está llevando adelante una provocación“.\nAsimismo, señaló que sus dichos resultan belicosos e incitantes para Argentina, un escenario que, a su juicio, podría ser favorable a los intereses imperialistas de la administración Trump.\n«Es decir, es un hecho muy peligroso y se llega a situaciones que superan cualquier expresión diplomática«, planteó en declaraciones a Radio Nuevo Mundo.\nEl timonel se refirió a la carta redactada por14 diputados y diputadas de oposición dirigida al canciller José Pérez en la que lo llamaron a “cumplir con sus deberes constitucionales” y declarar persona non grata a Judd. debido a sus reiteradas intervenciones en asuntos internos del país, particularmente sus recientes declaraciones sobre el Estrecho de Magallanes y la Antártica.\nLa misiva suscrita por los diputados Luis Cuello, Nathalie Castillo, Daniela Serrano, Lorena Pizarro y Boris Barrera del Partido Comunista; Nelson Venegas Juan Santana y Emilia Nuyado del Partido Socialista; El DC Patricio Pinilla, Consuelo Veloso, Gael Yeomans, Lorena Fries y Gonzalo Winter por parte del Frente Amplio y Ana María Gazmuri de Acción Humanista, plantea que el ministro de Relacione Exteriores “compromete gravemente el honor de la Nación” al permitir que el embajador estadounidense intervenga permanentemente en asuntos de política interna, proyectando ante el mundo la imagen de Chile como «un Estado débil y subordinado a otro Estado».\nAl respecto, Carmona indicó que “hace falta una posición con la máxima transversalidad política, social e institucional”, al tiempo que instó a no reabrir debates sobre las potestades y límites que tiene Chile en su territorio.",
+        "autor": "Leonardo Buitrago",
+        "imagen_url": "https://www.elciudadano.com/wp-content/uploads/2026/10/Carmona_Judd-e1792063571928.jpg",
+        "fecha_extraccion": "2026-10-19T02:52:18.697262"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 1,
+      "Center": 0,
+      "Right": 0
+    }
+  },
+  {
+    "evento_id": "7bf1f31f-aa91-4267-b8ac-73fe16133371",
+    "noticias": [
+      {
+        "medio_id": "10",
+        "sesgo_politico": "Left",
+        "url": "https://interferencia.cl/radio/cachai/los-suenos",
+        "titulo": "Los sueños",
+        "cuerpo": "Los sueños\nConversaciones sobre neurociencia con Ricardo Martínez.\nSé uno de los 1000 suscriptores que hacen sostenible a Interferencia.\nsuscriptores\nInterferencia lanza su primera campaña de suscripciones en más de cinco años. La meta es lograr al menos 1.000 suscriptores nuevos o no vigentes para poder continuar fiscalizando al poder, sea cual sea su color político.\nDesde $3.000 mensual\nConversaciones sobre neurociencia con Ricardo Martínez.\nYa que estás aquí, te queremos invitar a ser parte de Interferencia. Suscríbete. Gracias a lectores como tú, financiamos un periodismo libre e independiente. Te quedan artículos gratuitos este mes.\nQUE MATERIAL BIBLIOGRAFICO PUEDE UD RECOMENCDAR PARA PROFUNDIZAR EL CONOCIMIENTO SOBRE LOS SIUEÑOS?\nGRACIAS",
+        "autor": "Redacción",
+        "imagen_url": null,
+        "fecha_extraccion": "2026-10-19T02:52:27.057262"
+      },
+      {
+        "medio_id": "10",
+        "sesgo_politico": "Left",
+        "url": "https://interferencia.cl/radio/cachai/el-cerebro-y-la-lectura",
+        "titulo": "El cerebro y la lectura",
+        "cuerpo": "El cerebro y la lectura\nConversaciones sobre neurociencia con Ricardo Martínez.\nSé uno de los 1000 suscriptores que hacen sostenible a Interferencia.\nsuscriptores\nInterferencia lanza su primera campaña de suscripciones en más de cinco años. La meta es lograr al menos 1.000 suscriptores nuevos o no vigentes para poder continuar fiscalizando al poder, sea cual sea su color político.\nDesde $3.000 mensual\nConversaciones sobre neurociencia con Ricardo Martínez.\nYa que estás aquí, te queremos invitar a ser parte de Interferencia. Suscríbete. Gracias a lectores como tú, financiamos un periodismo libre e independiente. Te quedan artículos gratuitos este mes.",
+        "autor": "Redacción",
+        "imagen_url": null,
+        "fecha_extraccion": "2026-10-19T02:52:32.424896"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 2,
+      "Center": 0,
+      "Right": 0
+    }
+  },
+  {
+    "evento_id": "e927b8d7-3818-46a0-8792-9b5f97c2ae3e",
+    "noticias": [
+      {
+        "medio_id": "10",
+        "sesgo_politico": "Left",
+        "url": "https://interferencia.cl/visual/hinchas-argentinos-celebran-en-santiago-la-copa-del-mundo-qatar-2022",
+        "titulo": "Hinchas argentinos celebran en Santiago la Copa del Mundo Qatar 2022",
+        "cuerpo": "Hinchas argentinos celebran en Santiago la Copa del Mundo Qatar 2022\nHinchas argentinos celebran en Santiago de Chile la obtención del primer lugar en el Mundial de Fútbol de Qatar 2022.\nFotografías: Melian Riffo.\nSé uno de los 1000 suscriptores que hacen sostenible a Interferencia.\nsuscriptores\nInterferencia lanza su primera campaña de suscripciones en más de cinco años. La meta es lograr al menos 1.000 suscriptores nuevos o no vigentes para poder continuar fiscalizando al poder, sea cual sea su color político.\nDesde $3.000 mensual\nHinchas argentinos celebran en Santiago de Chile la obtención del primer lugar en el Mundial de Fútbol de Qatar 2022.\nFotografías: Melian Riffo.\nYa que estás aquí, te queremos invitar a ser parte de Interferencia. Suscríbete. Gracias a lectores como tú, financiamos un periodismo libre e independiente. Te quedan artículos gratuitos este mes.",
+        "autor": "Redacción",
+        "imagen_url": null,
+        "fecha_extraccion": "2026-10-19T02:52:29.618271"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 1,
+      "Center": 0,
+      "Right": 0
+    }
+  },
+  {
+    "evento_id": "3919d244-fc68-4428-b9c7-91c7a81c445e",
+    "noticias": [
+      {
+        "medio_id": "10",
+        "sesgo_politico": "Left",
+        "url": "https://interferencia.cl/tv/el-origen-del-clan-de-los-kast-en-chile",
+        "titulo": "El origen del clan de los Kast en Chile",
+        "cuerpo": "El origen del clan de los Kast en Chile\nJosé Antonio Kast: la historia familiar detrás del presidente electo.\nSé uno de los 1000 suscriptores que hacen sostenible a Interferencia.\nsuscriptores\nInterferencia lanza su primera campaña de suscripciones en más de cinco años. La meta es lograr al menos 1.000 suscriptores nuevos o no vigentes para poder continuar fiscalizando al poder, sea cual sea su color político.\nDesde $3.000 mensual\nJosé Antonio Kast: la historia familiar detrás del presidente electo.\nYa que estás aquí, te queremos invitar a ser parte de Interferencia. Suscríbete. Gracias a lectores como tú, financiamos un periodismo libre e independiente. Te quedan artículos gratuitos este mes.\nhay que ver como nos gobierna , su postura extrema creo que traerá muchos retrocesos, en materias económicas, sociales, y medioambientales.",
+        "autor": "Redacción",
+        "imagen_url": null,
+        "fecha_extraccion": "2026-10-19T02:52:35.845405"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 1,
+      "Center": 0,
+      "Right": 0
+    }
+  },
+  {
+    "evento_id": "64873d73-8c70-4431-87a4-2453ce874140",
+    "noticias": [
+      {
+        "medio_id": "10",
+        "sesgo_politico": "Left",
+        "url": "https://interferencia.cl/visual/todo-mi-amor-esta-aqui",
+        "titulo": "\"Todo mi amor está aquí\"",
+        "cuerpo": "\"Todo mi amor está aquí\"\nFotografías hechas por Leonardo Cabrera Lobos. Textos por Raúl Zurita, Víctor Jara y Salvador Allende.\n\"Canté, canté al amor, con la cara toda bañada canté de amor y los muchachos me sonrieron. Más fuerte canté, la pasión puse, el sueño, la lágrima\".\nRaúl Zurita, Canto a su amor desaparecido (1985)\nEL CHICHO\n\"...Marcharemos por el camino de la libertad para construir la sociedad chilena que tiene el derecho nuestra patria de vivir, con el esfuerzo y el cariño de todos nosotros. ¡Adelante, camaradas!\".\nSalvador Allende, Informe al pueblo (1971)\nVIEJOS JÓVENES\n\"...Fui amigo del comandante Ernesto Che Guevara. Me regaló el segundo ejemplar de su libro Guerra de Guerrillas; el primero se lo dio a Fidel. Yo estaba en Cuba cuando salió, y en la dedicatoria que me puso dice lo siguiente: A Salvador Allende, que por otros medios trata de obtener lo mismo.\".\nSalvador Allende, Discurso en Universidad de Guadalajara, (1972)\n\"La sangre del compañero Presidente\ngolpea más fuerte que bombas y metrallas.\nAsí golpeará nuestro puño nuevamente\".\nVíctor Jara, Somos Cinco Mil\n\"...No es duro ni la soledad. Nada ha sucedido y mi sueño se levanta y cae como siempre. Como los días. Como la noche. Todo mi amor está aquí y se ha quedado: pegado a las rocas al mar y a las montañas.\nPegado, pegado a las rocas al mar y a las montañas...\"\nRaúl Zurita, Canto a su amor desaparecido (1985)\nTENGO FE EN CHILE Y SU DESTINO\n\"Trabajadores de mi patria: tengo fe en Chile y su destino. Superarán otros hombres este momento gris y amargo, donde la traición pretende imponerse. Sigan ustedes sabiendo que, mucho más temprano que tarde, de nuevo abrirán las grandes alamedas por donde pase el hombre libre para construir una sociedad mejor.\n¡Viva Chile! ¡Viva el pueblo! ¡Vivan los trabajadores!\".\nSalvador Allende, 11 de septiembre de 1973\n\"Pero a nosotros nunca nos hallarán porque nuestro amor está pegado a las rocas, al mar y a las montañas\".\nRaúl Zurita, Canto a su amor desaparecido (1985)\nFotografías hechas entre mayo y agosto de 2014 por Leonardo Cabrera Lobos.\nAgradecimientos: Cementerio General de Recoleta - Miguel Candia Ceballos - Carla Vilches Rivera - Miguel Cárdenas - Ale Suárez Gómez - Ana María Pérez - Osvaldo Muñoz Villablanca\n...y al Chicho!!\nOriginal disponible en https://todomiamor.leito.cl/",
+        "autor": "Redacción",
+        "imagen_url": null,
+        "fecha_extraccion": "2026-10-19T02:52:38.596426"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 1,
+      "Center": 0,
+      "Right": 0
+    }
+  },
+  {
+    "evento_id": "bc26683f-3bb0-4908-8a71-d2898b4d1729",
+    "noticias": [
+      {
+        "medio_id": "10",
+        "sesgo_politico": "Left",
+        "url": "https://interferencia.cl/tv/schoenstatt-el-movimiento-ultra-conservador-catolico-al-que-pertenece-jose-antonio-kast",
+        "titulo": "Schoenstatt, el movimiento ultra conservador católico al que pertenece José Antonio Kast",
+        "cuerpo": "Schoenstatt, el movimiento ultra conservador católico al que pertenece José Antonio Kast\nSchoenstatt: el movimiento religioso ligado a la familia Kast.\nSé uno de los 1000 suscriptores que hacen sostenible a Interferencia.\nsuscriptores\nInterferencia lanza su primera campaña de suscripciones en más de cinco años. La meta es lograr al menos 1.000 suscriptores nuevos o no vigentes para poder continuar fiscalizando al poder, sea cual sea su color político.\nDesde $3.000 mensual\nSchoenstatt: el movimiento religioso ligado a la familia Kast.\nYa que estás aquí, te queremos invitar a ser parte de Interferencia. Suscríbete. Gracias a lectores como tú, financiamos un periodismo libre e independiente. Te quedan artículos gratuitos este mes.",
+        "autor": "Redacción",
+        "imagen_url": null,
+        "fecha_extraccion": "2026-10-19T02:52:42.096118"
+      }
+    ],
+    "distribucion_sesgo": {
+      "Left": 1,
+      "Center": 0,
+      "Right": 0
+    }
+  }
+]
