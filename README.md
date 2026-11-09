@@ -6,7 +6,7 @@ Proyecto APT de la asignatura Capstone (PTY4614), Ingeniería en Informática, D
 
 **Documentación de la API (Swagger):** [falta url backend]/docs
 
-**Tablero Kanban:** [falta url a tablero github projects]
+**Tablero Kanban:** (https://github.com/users/V-Puentes/projects/3)
 
 ## Descripción
  
