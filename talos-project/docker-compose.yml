@@ -1,14 +1,9 @@
-version: '3.8'
-
 services:
   db:
     image: postgres:15-alpine
     container_name: talos_postgres
     restart: always
-    environment:
-      POSTGRES_USER: talos_user
-      POSTGRES_PASSWORD: talos_pass
-      POSTGRES_DB: talos_db
+    env_file: .env
     ports:
       - "5432:5432"
     volumes:
