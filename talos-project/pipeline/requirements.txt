@@ -1,5 +1,5 @@
 google-genai
-pydantic==2.6.4
+pydantic
 tenacity==8.2.3
 python-dotenv==1.0.1
 requests==2.31.0
