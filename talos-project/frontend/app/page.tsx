@@ -1,124 +1,117 @@
-import React, { Suspense } from 'react';
-import { connection } from 'next/server';
+"use client";
 
-interface Bias {
-  left: number;
-  center: number;
-  right: number;
-}
+import { useMemo, useState } from "react";
+import { api } from "@/lib/api";
+import { useApi } from "@/lib/useApi";
+import EventCard from "@/components/EventCard";
+import { Cargando, ErrorCarga, Vacio } from "@/components/Estado";
 
-interface Evento {
-  id: string;
-  titulo_neutro: string;
-  categoria: string;
-  fecha: string;
-  n_articulos: number;
-  n_medios: number;
-  imagen_url?: string;
-  imagen_medio?: string;
-  destacado?: string;
-  bias?: Bias;
-  subjetividad_promedio?: number;
-}
+const POR_PAGINA = 12;
 
-async function getEvents(): Promise<Evento[]> {
-  const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
-  try {
-    const res = await fetch(`${baseUrl}/events/feed`, { cache: 'no-store' });
-    if (!res.ok) return [];
-    return await res.json();
-  } catch (error) {
-    return [];
-  }
-}
+export default function FeedPage() {
+  const { datos, error, lento, cargando, reintentar } = useApi(() => api.feed(), "feed");
+  const [categoria, setCategoria] = useState<string | null>(null);
+  const [soloVarios, setSoloVarios] = useState(false);
+  const [visibles, setVisibles] = useState(POR_PAGINA);
 
-async function EventFeed() {
-  await connection();
-  const events = await getEvents();
-
-  if (events.length === 0) {
-    return (
-      <div className="p-8 bg-white border border-gray-200 rounded-xl text-center text-gray-500 shadow-sm">
-        No se encontraron eventos activos en el feed o la API no está disponible.
-      </div>
-    );
-  }
-
-  return (
-    <div className="space-y-6">
-      {events.map((evento) => (
-        <article key={evento.id} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-          <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-            <span className="text-xs font-semibold px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
-              {evento.categoria || 'Noticias'}
-            </span>
-            <span className="text-xs text-gray-400">
-              {evento.fecha ? new Date(evento.fecha).toLocaleDateString('es-CL', { day: '2-digit', month: 'short', year: 'numeric' }) : ''}
-            </span>
-          </div>
-
-          <h2 className="text-xl font-bold text-gray-900 mb-3 leading-snug">
-            {evento.titulo_neutro}
-          </h2>
-
-          {evento.destacado && (
-            <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-              {evento.destacado}
-            </p>
-          )}
-
-          {evento.imagen_url && (
-            <div className="mb-4 overflow-hidden rounded-lg border border-gray-100 max-h-80 bg-gray-50">
-              <img src={evento.imagen_url} alt={evento.titulo_neutro} className="w-full h-full object-cover" />
-            </div>
-          )}
-
-          <div className="flex flex-wrap items-center justify-between pt-4 border-t border-gray-100 text-xs text-gray-600 gap-4">
-            <div className="flex items-center gap-3">
-              {evento.imagen_medio && (
-                <span className="font-medium text-gray-700">Medio: <strong className="text-gray-900">{evento.imagen_medio}</strong></span>
-              )}
-              {evento.subjetividad_promedio !== undefined && (
-                <span className="px-2.5 py-1 rounded-md bg-amber-50 text-amber-800 border border-amber-200 font-medium">
-                  Subjetividad: {evento.subjetividad_promedio} / 5
-                </span>
-              )}
-            </div>
-
-            {evento.bias && (
-              <div className="flex items-center gap-2">
-                <span className="text-gray-500 font-medium">Sesgo:</span>
-                <span className="px-2 py-0.5 rounded bg-blue-50 text-blue-700 font-semibold border border-blue-100">Izq: {evento.bias.left}%</span>
-                <span className="px-2 py-0.5 rounded bg-gray-100 text-gray-700 font-semibold border border-gray-200">Centro: {evento.bias.center}%</span>
-                <span className="px-2 py-0.5 rounded bg-red-50 text-red-700 font-semibold border border-red-100">Der: {evento.bias.right}%</span>
-              </div>
-            )}
-          </div>
-        </article>
-      ))}
-    </div>
+  const eventos = useMemo(() => datos ?? [], [datos]);
+  const categorias = useMemo(
+    () => Array.from(new Set(eventos.map((e) => e.categoria).filter((c): c is string => !!c))).sort(),
+    [eventos],
   );
-}
+  const filtrados = useMemo(
+    () => eventos.filter((e) => (!categoria || e.categoria === categoria) && (!soloVarios || e.n_medios > 1)),
+    [eventos, categoria, soloVarios],
+  );
+  const conVarios = eventos.filter((e) => e.n_medios > 1).length;
+  const noticias = eventos.reduce((s, e) => s + e.n_articulos, 0);
 
-export default function HomePage() {
+  function filtrar(c: string | null) {
+    setCategoria(c);
+    setVisibles(POR_PAGINA);
+  }
+
   return (
-    <main className="min-h-screen bg-gray-50 text-gray-900 font-sans p-6 md:p-12">
-      <header className="max-w-4xl mx-auto mb-8 pb-4 border-b border-gray-200 flex justify-between items-end">
-        <div>
-          <h1 className="text-3xl font-extrabold text-gray-900 tracking-tight">Talos Informa</h1>
-          <p className="text-gray-500 text-sm mt-1">Plataforma de Análisis de Prensa e Integración NLP</p>
-        </div>
-      </header>
+    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
+      <section className="mb-6">
+        <h1 className="text-3xl font-extrabold tracking-tight text-gray-900">Un mismo hecho, distintas coberturas</h1>
+        <p className="mt-2 max-w-2xl text-gray-600">
+          Talos agrupa las noticias de diez medios chilenos por hecho y muestra cómo se reparte su cobertura entre medios de
+          izquierda, centro y derecha. Elige un hecho para comparar sus titulares, su tono y su subjetividad.
+        </p>
+        {datos && (
+          <dl className="mt-5 grid grid-cols-3 gap-3 sm:max-w-lg">
+            {[
+              ["Hechos", eventos.length],
+              ["Noticias", noticias],
+              ["Con varios medios", conVarios],
+            ].map(([t, v]) => (
+              <div key={t} className="rounded-xl border border-gray-200 bg-white p-3">
+                <dt className="text-xs text-gray-500">{t}</dt>
+                <dd className="text-2xl font-bold text-gray-900">{v}</dd>
+              </div>
+            ))}
+          </dl>
+        )}
+      </section>
 
-      <div className="max-w-4xl mx-auto">
-        <Suspense fallback={
-          <div className="p-8 bg-white border border-gray-200 rounded-xl text-center text-gray-400 animate-pulse shadow-sm">
-            Cargando feed de eventos...
+      {datos && eventos.length > 0 && (
+        <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-wrap gap-2" role="group" aria-label="Filtrar por categoría">
+            {[null, ...categorias].map((c) => (
+              <button
+                key={c ?? "todas"}
+                type="button"
+                aria-pressed={categoria === c}
+                onClick={() => filtrar(c)}
+                className={`rounded-full border px-3 py-1 text-sm font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 ${
+                  categoria === c ? "border-gray-900 bg-gray-900 text-white" : "border-gray-300 bg-white text-gray-700 hover:border-gray-500"
+                }`}
+              >
+                {c ?? "Todas"}
+              </button>
+            ))}
           </div>
-        }>
-          <EventFeed />
-        </Suspense>
-      </div>
-    </main>
+          <label className="inline-flex cursor-pointer items-center gap-2 text-sm text-gray-700">
+            <input
+              type="checkbox"
+              checked={soloVarios}
+              onChange={(e) => {
+                setSoloVarios(e.target.checked);
+                setVisibles(POR_PAGINA);
+              }}
+              className="h-4 w-4 accent-gray-900"
+            />
+            Solo hechos cubiertos por más de un medio
+          </label>
+        </div>
+      )}
+
+      {cargando && <Cargando lento={lento} />}
+      {error && <ErrorCarga onReintentar={reintentar} />}
+      {datos && eventos.length === 0 && <Vacio texto="Todavía no hay hechos recolectados en este período." />}
+      {datos && eventos.length > 0 && filtrados.length === 0 && <Vacio texto="No hay hechos para este filtro." />}
+
+      {filtrados.length > 0 && (
+        <>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {filtrados.slice(0, visibles).map((e) => (
+              <EventCard key={e.id} evento={e} />
+            ))}
+          </div>
+          {visibles < filtrados.length && (
+            <div className="mt-8 text-center">
+              <button
+                type="button"
+                onClick={() => setVisibles((v) => v + POR_PAGINA)}
+                className="rounded-lg border border-gray-300 bg-white px-5 py-2 text-sm font-semibold text-gray-800 hover:border-gray-500"
+              >
+                Cargar más ({filtrados.length - visibles} restantes)
+              </button>
+            </div>
+          )}
+        </>
+      )}
+    </div>
   );
 }
