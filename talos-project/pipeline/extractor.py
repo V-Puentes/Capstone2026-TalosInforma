@@ -1,6 +1,6 @@
 import trafilatura
 from bs4 import BeautifulSoup
-from datetime import datetime
+from datetime import datetime, timezone
 
 def extract_article_content(url: str, medio_id: str, sesgo: str) -> dict:
     try:
@@ -45,7 +45,7 @@ def extract_article_content(url: str, medio_id: str, sesgo: str) -> dict:
             "cuerpo": text_body.strip(),
             "autor": author.strip() if author else "Redacción",
             "imagen_url": image_url,
-            "fecha_extraccion": datetime.utcnow().isoformat()
+            "fecha_extraccion": datetime.now(timezone.utc).isoformat()
         }
 
     except Exception as e:
