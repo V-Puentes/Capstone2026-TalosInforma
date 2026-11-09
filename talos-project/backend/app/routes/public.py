@@ -53,6 +53,8 @@ def feed(categoria: str | None = None,
             bias=_bias(ev.noticias),
             subjetividad_promedio=(sum(a.subjetividad_score for a in analisis) / len(analisis)) if analisis else None,
         ))
+    # Primero los hechos cubiertos por más medios (los que permiten comparar), luego los más recientes
+    salida.sort(key=lambda e: (e.n_medios, e.n_articulos, e.fecha), reverse=True)
     return salida[(pagina - 1) * limite: pagina * limite]
 
 

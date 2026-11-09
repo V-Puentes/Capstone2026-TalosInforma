@@ -7,7 +7,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from app.database import SessionLocal, Base, engine
-from app.models import Medio, Evento, Noticia, AnalisisNoticia
+import sys
+from app.models import Medio, Evento, Noticia, AnalisisNoticia, Reporte
 
 AQUI = Path(__file__).resolve().parent
 PIPELINE_DIR = Path(os.getenv("PIPELINE_DIR", AQUI.parent / "pipeline"))
@@ -70,10 +71,20 @@ def cargar_eventos(db):
     print(f"[eventos] {nuevos_eventos} nuevos, {ampliados} ampliados, {nuevas_noticias} noticias nuevas")
 
 
+def reiniciar(db):
+    """Borra eventos, noticias, análisis y reportes para recargar todo con un nuevo agrupamiento."""
+    for modelo in (Reporte, AnalisisNoticia, Noticia, Evento):
+        db.query(modelo).delete()
+    db.commit()
+    print("[reset] eventos, noticias, análisis y reportes eliminados")
+
+
 if __name__ == "__main__":
     Base.metadata.create_all(bind=engine)
     db = SessionLocal()
     try:
+        if "--reset" in sys.argv:
+            reiniciar(db)
         cargar_medios(db)
         cargar_eventos(db)
     finally:
