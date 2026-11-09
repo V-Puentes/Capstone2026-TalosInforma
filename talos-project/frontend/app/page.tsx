@@ -1,27 +1,24 @@
 import React, { Suspense } from 'react';
 import { connection } from 'next/server';
 
-interface Analisis {
-  categoria?: string;
-  tono_titular?: string;
-  subjetividad_score?: number;
-  resumen_puntos?: string[];
-}
-
-interface Noticia {
-  id: number;
-  titulo: string;
-  url: string;
-  medio_id: number;
-  medio?: { nombre: string };
-  analisis?: Analisis;
+interface Bias {
+  left: number;
+  center: number;
+  right: number;
 }
 
 interface Evento {
-  id: number;
-  titulo: string;
-  resumen?: string;
-  noticias: Noticia[];
+  id: string;
+  titulo_neutro: string;
+  categoria: string;
+  fecha: string;
+  n_articulos: number;
+  n_medios: number;
+  imagen_url?: string;
+  imagen_medio?: string;
+  destacado?: string;
+  bias?: Bias;
+  subjetividad_promedio?: number;
 }
 
 async function getEvents(): Promise<Evento[]> {
@@ -41,62 +38,81 @@ async function EventFeed() {
 
   if (events.length === 0) {
     return (
-      <div className="p-6 bg-slate-800 rounded border border-slate-700 text-center text-slate-400">
+      <div className="p-8 bg-white border border-gray-200 rounded-xl text-center text-gray-500 shadow-sm">
         No se encontraron eventos activos en el feed o la API no está disponible.
       </div>
     );
   }
 
   return (
-    <>
+    <div className="space-y-6">
       {events.map((evento) => (
-        <div key={evento.id} className="p-6 bg-slate-800 rounded-lg border border-slate-700 shadow-md">
-          <h2 className="text-xl font-bold text-white mb-2">{evento.titulo}</h2>
-          {evento.resumen && <p className="text-sm text-slate-300 mb-4">{evento.resumen}</p>}
-          
-          <div className="space-y-3 mt-4">
-            {evento.noticias?.map((noticia) => (
-              <div key={noticia.id} className="p-4 bg-slate-900 rounded border border-slate-700">
-                <div className="flex justify-between items-center mb-1">
-                  <span className="text-xs font-semibold px-2 py-0.5 rounded bg-blue-900/60 text-blue-300">
-                    {noticia.medio?.nombre || `Medio #${noticia.medio_id}`}
-                  </span>
-                  {noticia.analisis?.subjetividad_score !== undefined && (
-                    <span className="text-xs px-2 py-0.5 rounded bg-slate-800 text-amber-400 border border-amber-400/20">
-                      Subjetividad: {noticia.analisis.subjetividad_score}/5
-                    </span>
-                  )}
-                </div>
-                <a href={noticia.url} target="_blank" rel="noreferrer" className="text-base font-medium text-slate-100 hover:text-blue-400 transition-colors">
-                  {noticia.titulo}
-                </a>
-                {noticia.analisis?.resumen_puntos && (
-                  <ul className="list-disc list-inside mt-2 text-xs text-slate-400 space-y-1">
-                    {noticia.analisis.resumen_puntos.map((pt, idx) => (
-                      <li key={idx}>{pt}</li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            ))}
+        <article key={evento.id} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+          <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+            <span className="text-xs font-semibold px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
+              {evento.categoria || 'Noticias'}
+            </span>
+            <span className="text-xs text-gray-400">
+              {evento.fecha ? new Date(evento.fecha).toLocaleDateString('es-CL', { day: '2-digit', month: 'short', year: 'numeric' }) : ''}
+            </span>
           </div>
-        </div>
+
+          <h2 className="text-xl font-bold text-gray-900 mb-3 leading-snug">
+            {evento.titulo_neutro}
+          </h2>
+
+          {evento.destacado && (
+            <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+              {evento.destacado}
+            </p>
+          )}
+
+          {evento.imagen_url && (
+            <div className="mb-4 overflow-hidden rounded-lg border border-gray-100 max-h-80 bg-gray-50">
+              <img src={evento.imagen_url} alt={evento.titulo_neutro} className="w-full h-full object-cover" />
+            </div>
+          )}
+
+          <div className="flex flex-wrap items-center justify-between pt-4 border-t border-gray-100 text-xs text-gray-600 gap-4">
+            <div className="flex items-center gap-3">
+              {evento.imagen_medio && (
+                <span className="font-medium text-gray-700">Medio: <strong className="text-gray-900">{evento.imagen_medio}</strong></span>
+              )}
+              {evento.subjetividad_promedio !== undefined && (
+                <span className="px-2.5 py-1 rounded-md bg-amber-50 text-amber-800 border border-amber-200 font-medium">
+                  Subjetividad: {evento.subjetividad_promedio} / 5
+                </span>
+              )}
+            </div>
+
+            {evento.bias && (
+              <div className="flex items-center gap-2">
+                <span className="text-gray-500 font-medium">Sesgo:</span>
+                <span className="px-2 py-0.5 rounded bg-blue-50 text-blue-700 font-semibold border border-blue-100">Izq: {evento.bias.left}%</span>
+                <span className="px-2 py-0.5 rounded bg-gray-100 text-gray-700 font-semibold border border-gray-200">Centro: {evento.bias.center}%</span>
+                <span className="px-2 py-0.5 rounded bg-red-50 text-red-700 font-semibold border border-red-100">Der: {evento.bias.right}%</span>
+              </div>
+            )}
+          </div>
+        </article>
       ))}
-    </>
+    </div>
   );
 }
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen p-8 bg-slate-900 text-white font-sans">
-      <header className="max-w-5xl mx-auto mb-8 border-b border-slate-800 pb-4">
-        <h1 className="text-3xl font-bold text-blue-400">Talos Informa</h1>
-        <p className="text-slate-400 text-sm mt-1">Plataforma de Análisis de Prensa e Integración NLP</p>
+    <main className="min-h-screen bg-gray-50 text-gray-900 font-sans p-6 md:p-12">
+      <header className="max-w-4xl mx-auto mb-8 pb-4 border-b border-gray-200 flex justify-between items-end">
+        <div>
+          <h1 className="text-3xl font-extrabold text-gray-900 tracking-tight">Talos Informa</h1>
+          <p className="text-gray-500 text-sm mt-1">Plataforma de Análisis de Prensa e Integración NLP</p>
+        </div>
       </header>
 
-      <div className="max-w-5xl mx-auto space-y-6">
+      <div className="max-w-4xl mx-auto">
         <Suspense fallback={
-          <div className="p-6 bg-slate-800 rounded border border-slate-700 text-center text-slate-400 animate-pulse">
+          <div className="p-8 bg-white border border-gray-200 rounded-xl text-center text-gray-400 animate-pulse shadow-sm">
             Cargando feed de eventos...
           </div>
         }>
