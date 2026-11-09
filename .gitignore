@@ -3,3 +3,4 @@ Archivos de apoyo al plan de arquitectura
 **/.env
 __pycache__/
 *.pyc
+desktop.ini
