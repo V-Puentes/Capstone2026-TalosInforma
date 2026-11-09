@@ -1,13 +1,22 @@
+version: '3.8'
+
 services:
-  db:
+  postgres:
     image: postgres:15-alpine
     container_name: talos_postgres
-    restart: always
-    env_file: .env
+    environment:
+      POSTGRES_USER: talos_user
+      POSTGRES_PASSWORD: talos_password
+      POSTGRES_DB: talos_db
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
- 
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U talos_user -d talos_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
 volumes:
   postgres_data:
