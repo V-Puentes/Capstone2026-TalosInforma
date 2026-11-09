@@ -1,148 +1,188 @@
-# Capstone2026-TalosInforma
-Proyecto de Capstone 2026 de V. Puentes Aránguiz y C. Sotelo Clavería 
+# Talos: Plataforma de Análisis Comparativo de Sesgo Editorial
 
-# Talos: Plataforma de Verificación y Análisis de Sesgo en Noticias
+Proyecto APT de la asignatura Capstone (PTY4614), Ingeniería en Informática, Duoc UC. Sección 004D, Grupo 7. Docente: Claudia Reinoso H.
 
-**Proyecto CAPSTONE 2026 - Ingeniería en Informática - Duoc UC**
+**Aplicación en línea:** [falta url de frontend]
 
----
+**Documentación de la API (Swagger):** [falta url backend]/docs
 
-## Descripción del Proyecto
+**Tablero Kanban:** [falta url a tablero github projects]
 
-**Talos** es una plataforma web analítica (hub de contingencia nacional) que centraliza, clasifica y compara el sesgo editorial de noticias de la prensa nacional chilena. Su objetivo es permitir a los usuarios contrastar coberturas de distintos espectros editoriales y formar sus propios juicios críticos.
+## Descripción
+ 
+Cada medio de comunicación cubre los hechos desde su propia línea editorial, y los lectores rara vez comparan coberturas. 
+**Talos** es un hub de contingencia nacional que recolecta noticias de diez medios chilenos, agrupa las coberturas de un mismo hecho y muestra cómo se reparten entre medios de izquierda, centro y derecha, junto con el tono del titular, un puntaje de subjetividad y un resumen con los datos duros de cada noticia. Su objetivo es que el público general compare coberturas y forme su propio juicio.
 
+El sistema se encarga de *contrastar* coberturas; la plataforma no califica si un hecho es verdadero ni recomienda medios. La orientación editorial de cada medio no la calcula el modelo de lenguaje: esta es asignada por el equipo y registrada en `sources.json`, respaldada por la literatura (Figueroa-Bustos, 2025; Elejalde et al., 2018) y por la Ley 19.132, como se justifica en la sección 4.2 del informe final 2.6.
 
-La arquitectura del sistema implementa un pipeline de ingesta automatizada (web scraping) que recolecta noticias de 10 medios nacionales, las agrupa semánticamente por hecho noticioso mediante algoritmos de clustering, y utiliza un modelo de lenguaje (LLM) con validación estructurada para evaluar la subjetividad y el tono de cada cobertura. Todo esto se visualiza en un frontend interactivo con un **comparador editorial (Bias Bar)**.
-
-**El sistema no opera como una IA generativa tradicional (no redacta noticias nuevas ni genera opiniones libres)**, sino exclusivamente como un motor de análisis, clasificación y síntesis comparativa, promoviendo el pensamiento crítico y la formación de juicios informados por parte del usuario.
+Talos no opera como una IA generativa tradicional: no redacta noticias ni genera opiniones. El modelo de lenguaje se usa solo para clasificar, medir y resumir, y así promover el pensamiento crítico del usuario.
 
 ### Problemática que resuelve
 
-- Crisis de confianza en los medios de comunicación y erosión del "ecosistema" informativo digital
-- Dificultad para identificar sesgos editoriales a simple vista frente a la misma noticia
+- Crisis de confianza en los medios de comunicación y deterioro del ecosistema informativo digital.
+- Dificultad para identificar a simple vista los sesgos editoriales frente a un mismo hecho.
 - Sobrecarga informativa y polarización en redes sociales.
-- Falta de alfabetización mediática en la población, especialmente en grupos etarios vulnerables (adultos mayores, niños y adolescentes).
+- Baja alfabetización mediática, sobre todo en grupos vulnerables como adultos mayores y adolescentes.
 
 ### Usuarios objetivo
 
-- Público general interesado en consumir noticias de forma crítica.
-- Educadores e instituciones que enseñen comprensión lectora, reconocimiento de sesgos y análisis crítico de textos
-- Periodistas e investigadores que busquen herramientas que provean métricas estructuradas sobre el comportamiento de medios chilenos.
+- Público general que quiere informarse de forma crítica.
+- Docentes e instituciones educativas que enseñan comprensión lectora y reconocimiento de sesgos.
+- Periodistas e investigadores que necesitan métricas estructuradas sobre la cobertura de los medios chilenos.
 
----
+## Tecnologías
 
-## Tecnologías Utilizadas
+| Componente | Tecnologías |
+|---|---|
+| Pipeline de datos | Python, Requests, BeautifulSoup4 y Trafilatura (extracción), NLTK (preprocesamiento), scikit-learn (TF-IDF y similitud de coseno) |
+| Motor NLP | API de Gemini 3.8 Flash (SDK `google-genai`) con temperatura 0, validación con Pydantic y reintentos con Tenacity |
+| Base de datos | PostgreSQL 15 con modelos ORM de SQLAlchemy |
+| API | FastAPI con documentación Swagger y autenticación JWT para administración |
+| Frontend | Next.js, React, Tailwind CSS y Recharts |
+| Infraestructura | Docker y Docker Compose; backend en Render y frontend en Vercel |
+| Pruebas | Pytest y Locust |
 
-### Backend & API
-- **Python 3.11+** con **FastAPI** (API REST)
-- **SQLAlchemy** (ORM)
-- **PostgreSQL** (Base de datos relacional)
+## Arquitectura
 
-### Pipeline de Datos & Inteligencia Artificial
-- **BeautifulSoup / Trafilatura** (Web scraping)
-- **Scikit-learn (TF-IDF) / NLTK** (Clustering semántico)
-- **Gemini 3.8 Flash** (vía Google AI Studio) (Clasificación temática, tono y subjetividad)
-- **Pydantic** (Validación de esquemas JSON)
-- **Tenacity** (Control de reintentos y esperas para la API)
+La solución sigue una arquitectura desacoplada por componentes. El pipeline recolecta las noticias de los diez medios, las limpia, las agrupa por hecho y las envía al motor NLP, que devuelve un análisis validado por cada noticia. Los componentes del pipeline se comunican mediante archivos JSON con esquemas fijos; el script `loader.py` carga el resultado en PostgreSQL omitiendo los duplicados, la API REST en FastAPI expone los eventos, los análisis y las estadísticas, y el frontend en Next.js los consume por HTTP.
 
-### Frontend
-- **React 18+** con **Next.js**
-- **Tailwind CSS** (Estilizado)
-- **Recharts** (Gráficos, visualizaciones y mapa comparativo)
+```text
+                        10 medios nacionales chilenos
+          (sources.json: 3 de izquierda, 4 de centro y 3 de derecha)
+                                      │
+                     HTML público, respetando robots.txt
+                                      │
+                                      ▼
+    ┌───────────────── PIPELINE: talos-project/pipeline ─────────────────┐
+    │ collector.py      Obtiene las URL de cada medio                    │
+    │ extractor.py      BeautifulSoup4, con Trafilatura de respaldo;     │
+    │                   descarta textos de menos de 80 palabras          │
+    │                   ──▶ raw_news.json                                │
+    │ preprocessor.py   Limpieza y stopwords con NLTK                    │
+    │ clustering.py     TF-IDF y similitud de coseno ≥ 0,45              │
+    │                   ──▶ clustered_news.json                          │
+    │ nlp_engine.py     Gemini 3.8 Flash, temperatura 0, salida          │
+    │                   validada con Pydantic y reintentos con Tenacity  │
+    │                   ──▶ processed_events.json                        │
+    └────────────────────────────────────────────────────────────────────┘
+                                      │
+             loader.py: valida y carga, omitiendo URL duplicadas
+                                      │
+                                      ▼
+           ┌──────────── BASE DE DATOS: PostgreSQL 15 ────────────┐
+           │ medios, eventos, noticias,                           │
+           │ analisis_noticias, reportes y usuarios_admin         │
+           │ (tablas generadas desde los modelos ORM)             │
+           └──────────────────────────────────────────────────────┘
+                                      │
+                               SQLAlchemy (ORM)
+                                      │
+                                      ▼
+           ┌────────────────── API REST: FastAPI ─────────────────┐
+           │ GET  /events/feed      GET  /events/{id}             │
+           │ GET  /stats/medios     POST /reports                 │
+           │ POST /admin/login (JWT)    /docs (Swagger)           │
+           └──────────────────────────────────────────────────────┘
+                                      │
+                                 HTTP y JSON
+                                      │
+                                      ▼
+           ┌───── FRONTEND: Next.js, Tailwind CSS y Recharts ─────┐
+           │ Feed filtrable con BiasBar                           │
+           │ Vista comparativa por orientación editorial          │
+           │ Estadísticas por medio                               │
+           └──────────────────────────────────────────────────────┘
+                                      │
+                                      ▼
+                          Usuario (público general)
 
-### Infraestructura
-- **Docker** y **Docker Compose** (Contenerización)
-- **GitHub** (Control de versiones y tablero Kanban)
-- **Vercel / Render** (Plataformas de despliegue cloud)
+      En local: Docker Compose levanta db, backend, frontend y pipeline.
+        En la nube: API y base de datos en Render, frontend en Vercel.
+```
 
----
+La versión gráfica de este diagrama, el modelo entidad-relación, los diagramas UML y los requisitos no funcionales están en el [Documento de Diseño de Software](Fase%202/Evidencias%20Proyecto/Evidencias%20de%20documentaci%C3%B3n/Documento_Diseno_Software_Talos.docx) y en la carpeta [Evidencias de documentación](Fase%202/Evidencias%20Proyecto/Evidencias%20de%20documentaci%C3%B3n).
 
-## Instrucciones de Ejecución
+## Cómo ejecutar en local
 
-### Prerrequisitos
+Requisitos: Git, Docker y Docker Compose. Para ejecutar el motor NLP se necesita además una clave de la API de Gemini, que se obtiene gratis en Google AI Studio.
 
-- Docker y Docker Compose instalados
-- Python 3.11+
-- Node.js 18+
-- Git
+1. Clonar el repositorio y entrar a la carpeta del proyecto:
 
-### Pasos de instalación
-
-1. **Clonar el repositorio**
    ```bash
-   git clone https://github.com/tu-usuario/Capstone2026-TalosInforma.git
-   cd Capstone2026-TalosInforma
+   git clone https://github.com/V-Puentes/Capstone2026-TalosInforma.git
+   cd Capstone2026-TalosInforma/talos-project
+   ```
 
-2. **Configurar variables de entorno**
-- Crea un archivo .env en la raíz del proyecto con las siguientes variables:
+2. Crear los archivos de entorno a partir de los ejemplos (ninguno de ellos se sube al repositorio):
 
-### Base de Datos
-POSTGRES_USER=postgres
-POSTGRES_PASSWORD=tu_password
-POSTGRES_DB=talos_db
-DATABASE_URL=postgresql://postgres:tu_password@db:5432/talos_db
+   ```bash
+   cp .env.example .env
+   cp backend/.env.example backend/.env
+   cp pipeline/.env.example pipeline/.env
+   ```
 
-### LLM
-GEMINI_API_KEY=tu_api_key_de_google_ai_studio
+   En `pipeline/.env` se escribe la clave `GEMINI_API_KEY` y en `backend/.env` un valor propio para `SECRET_KEY`.
 
+3. Levantar la base de datos, la API y el frontend:
 
-3. **Levantar la infraestructura con Docker Compose**
-    ```bash
-    docker-compose up --build
+   ```bash
+   docker compose up --build -d
+   ```
 
+4. Ejecutar el pipeline (recolección, clustering y análisis NLP) y cargar los resultados en la base de datos:
 
-### Este comando levantará todos los servicios
+   ```bash
+   docker compose run --rm pipeline
+   docker compose exec backend python loader.py
+   ```
 
-- Base de datos PostgreSQL (puerto 5432)
+5. Abrir la aplicación en `http://localhost:3000` y la documentación de la API en `http://localhost:8000/docs`.
 
-- API FastAPI (puerto 8000)
+6. Ejecutar las pruebas:
 
-- Frontend Next.js (puerto 3000)
+   ```bash
+   docker compose exec backend pytest tests -v
+   docker compose run --rm pipeline pytest -v
+   ```
 
+El manual técnico, en `Fase 2/Evidencias Proyecto/Evidencias de documentación`, detalla las variables de entorno, el despliegue en Render y Vercel y la solución de problemas frecuentes.
 
-4. **Acceder a la plataforma**
-
-- Frontend: http://localhost:3000
-
-- Documentación API (Swagger): http://localhost:8000/docs
-
-5. **Ejecutar el scrapper manualmente**
-    ```bash
-    # Ejecutar el módulo de ingesta dentro del contenedor del backend
-    docker-compose exec scraper python main.py --run
-
----
-
-## Roles y Responsabilidades
+## Integrantes y roles
 
 | Integrante | Rol | Responsabilidades |
 |---|---|---|
-| Valentina Puentes | Arquitectura & Backend | Diseño del modelo relacional (PostgreSQL), API REST (FastAPI), integración y validación del motor NLP (Gemini + Pydantic), contenerización (Docker). |
-| Cristóbal Sotelo | Datos & Frontend | Pipeline de web scraping, algoritmo de clustering semántico (TF-IDF), maquetación y desarrollo del frontend interactivo (Next.js + Recharts). |
+| Valentina Puentes Aránguiz | Datos, backend y motor NLP | Modelo de datos en PostgreSQL, API REST en FastAPI, motor NLP con Gemini y contenerización con Docker |
+| Cristóbal Sotelo Clavería | Pipeline y frontend | Scrapers de los diez medios, preprocesamiento y clustering, frontend en Next.js y despliegue en Vercel |
 
----
+Ambos integrantes comparten la arquitectura, los diagramas UML, las pruebas unitarias, de integración y de rendimiento, los informes y la revisión cruzada del código mediante pull requests.
 
-## Metodología de Trabajo
+## Metodología
 
-El proyecto se gestiona mediante el marco ágil Kanban utilizando GitHub Projects, estructurado en cinco estados: Backlog, Análisis/Diseño, En Progreso, Pruebas/Validación y Terminado. Se aplica un límite estricto de trabajo en progreso (WIP Limit) de 2 tareas simultáneas por estado activo para garantizar el flujo continuo y asegurar que todo componente esté completamente probado antes de avanzar.
+El proyecto se gestiona con Kanban en un tablero de GitHub Projects con cinco columnas (Backlog, Análisis/Diseño, En Progreso, Pruebas/Validación y Terminado) y un límite WIP de dos tareas por estado activo. El trabajo se organizó en siete etapas que siguen el ciclo crear, implementar y probar, y el avance se controla con siete hitos (H1 a H7) registrados en la Carta Gantt. Una tarea solo pasa a Terminado cuando sus pruebas se ejecutaron y el otro integrante revisó su código.
 
----
+## Estructura del repositorio
 
-## Arquitectura de la Solución
+```text
+Capstone2026-TalosInforma/
+├── Fase 1/
+│   ├── Evidencias Grupales/        Guía 1.5 (definición del proyecto) y formativa 1.4
+│   └── Evidencias Individuales/    Autoevaluaciones 1.1 y 1.3 y diarios 1.2 de cada integrante
+├── Fase 2/
+│   ├── Evidencias Grupales/        Informe de avance 2.4 e informe final 2.6
+│   ├── Evidencias Individuales/    Diarios 2.1 y autoevaluaciones 2.2 de cada integrante
+│   └── Evidencias Proyecto/        Presentación, Carta Gantt, documentación y evidencias del sistema
+├── talos-project/
+│   ├── pipeline/                   Scrapers, clustering y motor NLP
+│   ├── backend/                    API FastAPI, modelos ORM y loader.py
+│   ├── frontend/                   Aplicación Next.js
+│   └── docker-compose.yml
+└── README.md
+```
 
-La plataforma se basa en una **arquitectura de microservicios**, diseñada para ser escalable y modular. Cada componente es independiente y se comunica a través de APIs REST.
+## Referencias
 
-- **PIPELINE DE INGESTA (ETL y Clustering):**
-    > Extrae noticias de los medios, aplica procesamiento de lenguaje natural clásico (NLTK/TF-IDF) para agrupar coberturas del mismo hecho noticioso y guarda los eventos brutos en PostgreSQL.
+Elejalde, E., Ferres, L., & Herder, E. (2018). On the nature of real and perceived bias in the mainstream media. *PLOS ONE, 13*(3), e0193765. https://doi.org/10.1371/journal.pone.0193765
 
-- **MOTOR NLP (IA, LLM):** 
-    > Consume los eventos en lotes, consulta la API de Gemini bajo esquemas estrictos de Pydantic para obtener la subjetividad, tono y resúmenes estructurados, y persiste el análisis en la base de datos.
+Figueroa-Bustos, A. (2025). Agenda temática, uso de fuentes y calidad en los medios alternativos El Ciudadano y El Líbero. *Cuadernos.info*, (61), 229–250. https://doi.org/10.7764/cdi.61.87916
 
-- **BACKEND (FastAPI):** 
-    > Expone los datos procesados y estadísticos a través de servicios REST documentados en Swagger.
-
-- **FRONTEND (Next.js):** 
-    > Consume la API y renderiza la interfaz responsiva, el feed de contingencia, los gráficos y el comparador editorial (Bias Bar) para el usuario final.
-
----
-
+Ley N.º 19.132. (1992, 8 de abril). Crea Empresa Televisión Nacional de Chile. Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idLey=19132
