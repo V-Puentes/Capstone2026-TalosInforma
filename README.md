@@ -2,18 +2,15 @@
 
 Proyecto APT de la asignatura Capstone (PTY4614), Ingeniería en Informática, Duoc UC. Sección 004D, Grupo 7. Docente: Claudia Reinoso H.
 
-**Aplicación en línea:** [falta url de frontend]
+**Aplicación en línea:** https://capstone2026-talos-informa.vercel.app
 
-**Documentación de la API (Swagger):** [falta url backend]/docs
-
-**Tablero Kanban:** (https://github.com/users/V-Puentes/projects/3)
+**Documentación de la API (Swagger):** https://talos-informa-backend.onrender.com/docs (el plan gratuito de Render suspende el servicio tras un periodo de inactividad, por lo que la primera consulta puede tardar cerca de un minuto)
 
 ## Descripción
- 
-Cada medio de comunicación cubre los hechos desde su propia línea editorial, y los lectores rara vez comparan coberturas. 
-**Talos** es un hub de contingencia nacional que recolecta noticias de diez medios chilenos, agrupa las coberturas de un mismo hecho y muestra cómo se reparten entre medios de izquierda, centro y derecha, junto con el tono del titular, un puntaje de subjetividad y un resumen con los datos duros de cada noticia. Su objetivo es que el público general compare coberturas y forme su propio juicio.
 
-El sistema se encarga de *contrastar* coberturas; la plataforma no califica si un hecho es verdadero ni recomienda medios. La orientación editorial de cada medio no la calcula el modelo de lenguaje: esta es asignada por el equipo y registrada en `sources.json`, respaldada por la literatura (Figueroa-Bustos, 2025; Elejalde et al., 2018) y por la Ley 19.132, como se justifica en la sección 4.2 del informe final 2.6.
+Cada medio cubre los hechos desde su propia línea editorial y el lector rara vez compara coberturas. Talos es un hub de contingencia nacional que recolecta noticias de diez medios chilenos, agrupa las coberturas de un mismo hecho y muestra cómo se reparten entre medios de izquierda, centro y derecha, junto con el tono del titular, un puntaje de subjetividad y un resumen con los datos duros de cada noticia. Su objetivo es que el público general compare coberturas y forme su propio juicio.
+
+Talos compara coberturas; no califica si un hecho es verdadero ni recomienda medios. La orientación editorial de cada medio no la calcula el modelo de lenguaje: es una asignación del equipo registrada en `sources.json` y respaldada por la literatura (Elejalde et al., 2018; Figueroa-Bustos, 2025) y por la Ley N.º 19.132, como se justifica en la sección 4.2 del informe final 2.6.
 
 Talos no opera como una IA generativa tradicional: no redacta noticias ni genera opiniones. El modelo de lenguaje se usa solo para clasificar, medir y resumir, y así promover el pensamiento crítico del usuario.
 
@@ -39,8 +36,8 @@ Talos no opera como una IA generativa tradicional: no redacta noticias ni genera
 | Base de datos | PostgreSQL 15 con modelos ORM de SQLAlchemy |
 | API | FastAPI con documentación Swagger y autenticación JWT para administración |
 | Frontend | Next.js, React, Tailwind CSS y Recharts |
-| Infraestructura | Docker y Docker Compose; backend en Render y frontend en Vercel |
-| Pruebas | Pytest y Locust |
+| Infraestructura | Docker Compose para PostgreSQL en local; backend en Render y frontend en Vercel |
+| Pruebas | Pytest (14 casos: 3 del pipeline y 11 de integración de la API); pruebas de rendimiento con Locust planificadas para la Fase 3 |
 
 ## Arquitectura
 
@@ -59,14 +56,14 @@ La solución sigue una arquitectura desacoplada por componentes. El pipeline rec
     │                   descarta textos de menos de 80 palabras          │
     │                   ──▶ raw_news.json                                │
     │ preprocessor.py   Limpieza y stopwords con NLTK                    │
-    │ clustering.py     TF-IDF y similitud de coseno ≥ 0,45              │
+    │ clustering.py     TF-IDF y similitud de coseno, umbral de 0,15     │
     │                   ──▶ clustered_news.json                          │
     │ nlp_engine.py     Gemini 3.8 Flash, temperatura 0, salida          │
     │                   validada con Pydantic y reintentos con Tenacity  │
     │                   ──▶ processed_events.json                        │
     └────────────────────────────────────────────────────────────────────┘
                                       │
-             loader.py: valida y carga, omitiendo URL duplicadas
+             loader.py: carga los JSON omitiendo URL duplicadas
                                       │
                                       ▼
            ┌──────────── BASE DE DATOS: PostgreSQL 15 ────────────┐
@@ -81,7 +78,8 @@ La solución sigue una arquitectura desacoplada por componentes. El pipeline rec
            ┌────────────────── API REST: FastAPI ─────────────────┐
            │ GET  /events/feed      GET  /events/{id}             │
            │ GET  /stats/medios     POST /reports                 │
-           │ POST /admin/login (JWT)    /docs (Swagger)           │
+           │ POST /admin/login (JWT)    GET /admin/reports        │
+           │ /docs (Swagger)                                      │
            └──────────────────────────────────────────────────────┘
                                       │
                                  HTTP y JSON
@@ -96,7 +94,7 @@ La solución sigue una arquitectura desacoplada por componentes. El pipeline rec
                                       ▼
                           Usuario (público general)
 
-      En local: Docker Compose levanta db, backend, frontend y pipeline.
+      En local: PostgreSQL en Docker Compose; API, pipeline y frontend con Python y Node.
         En la nube: API y base de datos en Render, frontend en Vercel.
 ```
 
@@ -104,7 +102,7 @@ La versión gráfica de este diagrama, el modelo entidad-relación, los diagrama
 
 ## Cómo ejecutar en local
 
-Requisitos: Git, Docker y Docker Compose. Para ejecutar el motor NLP se necesita además una clave de la API de Gemini, que se obtiene gratis en Google AI Studio.
+Requisitos: Git, Docker con Docker Compose, Python 3.11 o superior y Node.js 20 o superior. Para ejecutar el motor NLP se necesita además una clave de la API de Gemini, que se obtiene gratis en Google AI Studio.
 
 1. Clonar el repositorio y entrar a la carpeta del proyecto:
 
@@ -121,44 +119,69 @@ Requisitos: Git, Docker y Docker Compose. Para ejecutar el motor NLP se necesita
    cp pipeline/.env.example pipeline/.env
    ```
 
-   En `pipeline/.env` se escribe la clave `GEMINI_API_KEY` y en `backend/.env` un valor propio para `SECRET_KEY`.
+   En `.env` se definen el usuario, la contraseña y la base de PostgreSQL que usa `docker-compose.yml`. En `pipeline/.env` se escribe la clave `GEMINI_API_KEY`. En `backend/.env` se define un valor propio para `SECRET_KEY` y se ajusta `DATABASE_URL` con las mismas credenciales de `.env`.
 
-3. Levantar la base de datos, la API y el frontend:
-
-   ```bash
-   docker compose up --build -d
-   ```
-
-4. Ejecutar el pipeline (recolección, clustering y análisis NLP) y cargar los resultados en la base de datos:
+3. Levantar la base de datos PostgreSQL con Docker Compose:
 
    ```bash
-   docker compose run --rm pipeline
-   docker compose exec backend python loader.py
+   docker compose up -d
    ```
 
-5. Abrir la aplicación en `http://localhost:3000` y la documentación de la API en `http://localhost:8000/docs`.
-
-6. Ejecutar las pruebas:
+4. Ejecutar el pipeline completo (recolección, clustering y análisis NLP):
 
    ```bash
-   docker compose exec backend pytest tests -v
-   docker compose run --rm pipeline pytest -v
+   cd pipeline
+   pip install -r requirements.txt
+   python run_pipeline.py
+   cd ..
    ```
 
-El manual técnico, en `Fase 2/Evidencias Proyecto/Evidencias de documentación`, detalla las variables de entorno, el despliegue en Render y Vercel y la solución de problemas frecuentes.
+5. Instalar el backend, cargar los resultados en la base de datos y levantar la API:
+
+   ```bash
+   cd backend
+   pip install -r requirements.txt
+   python loader.py
+   uvicorn app.main:app --reload
+   ```
+
+6. En otra terminal, levantar el frontend:
+
+   ```bash
+   cd frontend
+   npm install
+   NEXT_PUBLIC_API_URL=http://localhost:8000 npm run dev
+   ```
+
+7. Abrir la aplicación en `http://localhost:3000` y la documentación de la API en `http://localhost:8000/docs`.
+
+8. Ejecutar las pruebas:
+
+   Las pruebas de la API usan una base de datos aparte, `talos_test`, cuya URL se indica en la variable `TEST_DATABASE_URL`:
+
+   ```bash
+   docker compose exec postgres createdb -U talos_user talos_test
+   cd backend
+   TEST_DATABASE_URL=postgresql://talos_user:<clave>@localhost:5432/talos_test pytest tests -v
+   cd ../pipeline && pytest test_scrapers.py -v
+   ```
+
+   `test_scrapers.py` consulta los sitios reales de los medios, por lo que necesita conexión a internet.
+
+En producción, el backend en Render usa las variables `DATABASE_URL`, `SECRET_KEY` y `CORS_ORIGINS` (con la URL del frontend), y el frontend en Vercel usa `NEXT_PUBLIC_API_URL` con la URL del backend, sin barra final.
 
 ## Integrantes y roles
 
 | Integrante | Rol | Responsabilidades |
 |---|---|---|
-| Valentina Puentes Aránguiz | Datos, backend y motor NLP | Modelo de datos en PostgreSQL, API REST en FastAPI, motor NLP con Gemini y contenerización con Docker |
+| Valentina Puentes Aránguiz | Datos, backend y motor NLP | Modelo de datos en PostgreSQL, API REST en FastAPI, motor NLP con Gemini y contenerización de la base de datos con Docker Compose |
 | Cristóbal Sotelo Clavería | Pipeline y frontend | Scrapers de los diez medios, preprocesamiento y clustering, frontend en Next.js y despliegue en Vercel |
 
-Ambos integrantes comparten la arquitectura, los diagramas UML, las pruebas unitarias, de integración y de rendimiento, los informes y la revisión cruzada del código mediante pull requests.
+Ambos integrantes comparten la arquitectura, los diagramas UML, las pruebas unitarias y de integración, los informes y la revisión cruzada del código.
 
 ## Metodología
 
-El proyecto se gestiona con Kanban en un tablero de GitHub Projects con cinco columnas (Backlog, Análisis/Diseño, En Progreso, Pruebas/Validación y Terminado) y un límite WIP de dos tareas por estado activo. El trabajo se organizó en siete etapas que siguen el ciclo crear, implementar y probar, y el avance se controla con siete hitos (H1 a H7) registrados en la Carta Gantt. Una tarea solo pasa a Terminado cuando sus pruebas se ejecutaron y el otro integrante revisó su código.
+El proyecto se gestiona con Kanban en un tablero de GitHub Projects con cinco columnas (Backlog, Análisis/Diseño, En Progreso, Pruebas/Validación y Terminado) y un límite WIP de dos tareas por estado activo. El trabajo se organizó en siete etapas que siguen el ciclo crear, implementar y probar, y el avance se controla con siete hitos (H1 a H7) registrados en la Carta Gantt. Una tarea solo pasa a Terminado cuando sus pruebas se ejecutaron, el otro integrante revisó su código y su documentación está actualizada.
 
 ## Estructura del repositorio
 
@@ -171,6 +194,8 @@ Capstone2026-TalosInforma/
 │   ├── Evidencias Grupales/        Informe de avance 2.4 e informe final 2.6
 │   ├── Evidencias Individuales/    Diarios 2.1 y autoevaluaciones 2.2 de cada integrante
 │   └── Evidencias Proyecto/        Presentación, Carta Gantt, documentación y evidencias del sistema
+├── prototipo/                     Prototipo navegable del frontend
+├── respaldos/                     Respaldo de la base de datos (backup_talos_db.sql)
 ├── talos-project/
 │   ├── pipeline/                   Scrapers, clustering y motor NLP
 │   ├── backend/                    API FastAPI, modelos ORM y loader.py
