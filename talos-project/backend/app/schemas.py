@@ -1,27 +1,38 @@
-from pydantic import BaseModel
+from datetime import datetime
 from typing import List, Optional
 from uuid import UUID
-from datetime import datetime
+from pydantic import BaseModel, ConfigDict
 
-class BiasDistribution(BaseModel):
-    Left: float
-    Center: float
-    Right: float
 
-class EventFeedItem(BaseModel):
+class Bias(BaseModel):
+    left: int
+    center: int
+    right: int
+
+
+class EventoFeed(BaseModel):
     id: UUID
-    titulo: str
+    titulo_neutro: str
+    categoria: Optional[str]
     fecha: datetime
-    total_fuentes: int
-    distribucion_sesgo: BiasDistribution
+    n_articulos: int
+    n_medios: int
+    imagen_url: Optional[str]
+    imagen_medio: Optional[str]
+    destacado: Optional[str]
+    bias: Bias
+    subjetividad_promedio: Optional[float]
 
-class AnalisisItem(BaseModel):
+
+class Analisis(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
     categoria: str
     tono_titular: str
     subjetividad_score: int
     resumen_puntos: List[str]
 
-class NoticiaDetail(BaseModel):
+
+class NoticiaDetalle(BaseModel):
     id: UUID
     medio_id: str
     medio_nombre: str
@@ -30,15 +41,36 @@ class NoticiaDetail(BaseModel):
     autor: Optional[str]
     url_noticia: str
     imagen_url: Optional[str]
-    analisis: Optional[AnalisisItem]
+    analisis: Optional[Analisis]
 
-class EventDetail(BaseModel):
+
+class EventoDetalle(BaseModel):
     id: UUID
     titulo_neutro: str
-    fecha_creacion: datetime
-    distribucion_sesgo: BiasDistribution
-    noticias: List[NoticiaDetail]
+    fecha: datetime
+    bias: Bias
+    noticias: List[NoticiaDetalle]
 
-class ReportCreate(BaseModel):
+
+class EstadisticaMedio(BaseModel):
+    medio_id: str
+    nombre: str
+    sesgo_politico: str
+    n_noticias: int
+    subjetividad_promedio: Optional[float]
+    tonos: dict
+
+
+class ReporteCrear(BaseModel):
     noticia_id: UUID
     motivo: str
+
+
+class LoginEntrada(BaseModel):
+    email: str
+    password: str
+
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str = "bearer"

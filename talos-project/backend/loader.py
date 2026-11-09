@@ -1,85 +1,80 @@
-import sys
-import os
 import json
+import os
+from pathlib import Path
+from urllib.parse import urlparse
+from dotenv import load_dotenv
 
-# Aseguramos que Python reconozca la carpeta app como módulo
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+load_dotenv()
 
-from app.database import SessionLocal
-from app.models import Evento, Medio, Noticia, AnalisisNoticia
+from app.database import SessionLocal, Base, engine
+from app.models import Medio, Evento, Noticia, AnalisisNoticia
 
-def run_loader():
-    print("[*] Iniciando carga de datos a PostgreSQL...")
-    db = SessionLocal()
-    try:
-        # 1. Cargar medios desde el sources.json del pipeline
-        sources_path = os.path.join("..", "pipeline", "sources.json")
-        with open(sources_path, "r", encoding="utf-8") as f:
-            sources = json.load(f)
-            
-        for s in sources:
-            if not db.query(Medio).filter(Medio.id == s["id"]).first():
-                nuevo_medio = Medio(
-                    id=s["id"],
-                    nombre=s["nombre"],
-                    url_base=s["url_seccion"],
-                    sesgo_politico=s["sesgo"]
-                )
-                db.add(nuevo_medio)
-        db.commit()
-        print("[+] Medios sincronizados correctamente.")
+AQUI = Path(__file__).resolve().parent
+PIPELINE_DIR = Path(os.getenv("PIPELINE_DIR", AQUI.parent / "pipeline"))
+if not PIPELINE_DIR.is_absolute():
+    PIPELINE_DIR = (AQUI / PIPELINE_DIR).resolve()
 
-        # 2. Cargar Eventos, Noticias y el Análisis NLP
-        events_path = os.path.join("..", "pipeline", "processed_events.json")
-        with open(events_path, "r", encoding="utf-8") as f:
-            events = json.load(f)
+PRIORIDAD = {"Center": 0, "Left": 1, "Right": 1}
 
-        for event_data in events:
-            analisis = event_data.get("analisis", {})
-            
-            # Asignar un título neutro basado en la categoría detectada por la IA
-            titulo_evento = f"Cobertura: {analisis.get('categoria', 'Noticia Nacional')}"
-            
-            nuevo_evento = Evento(titulo_neutro=titulo_evento)
-            db.add(nuevo_evento)
-            db.flush() # Genera el ID del evento inmediatamente
 
-            for noti_data in event_data.get("noticias", []):
-                # Evitar insertar noticias duplicadas
-                if db.query(Noticia).filter(Noticia.url_noticia == noti_data["url"]).first():
-                    continue
+def titulo_evento(noticias):
+    return sorted(noticias, key=lambda n: PRIORIDAD.get(n.get("sesgo_politico"), 2))[0]["titulo"]
 
-                nueva_noticia = Noticia(
-                    evento_id=nuevo_evento.id,
-                    medio_id=noti_data["medio_id"],
-                    titulo_original=noti_data["titulo"],
-                    cuerpo=noti_data.get("cuerpo", "Sin contenido"),
-                    autor=noti_data.get("autor", "Redacción"),
-                    url_noticia=noti_data["url"],
-                    imagen_url=noti_data.get("imagen_url")
-                )
-                db.add(nueva_noticia)
-                db.flush()
 
-                # Vincular el análisis estructurado de Gemini a la noticia
-                if analisis:
-                    nuevo_analisis = AnalisisNoticia(
-                        noticia_id=nueva_noticia.id,
-                        categoria=analisis.get("categoria", "Otro"),
-                        tono_titular=analisis.get("tono_titular", "Neutral"),
-                        subjetividad_score=analisis.get("subjetividad_score", 5),
-                        resumen_puntos=analisis.get("resumen_puntos", [])
-                    )
-                    db.add(nuevo_analisis)
+def cargar_medios(db):
+    fuentes = json.load(open(PIPELINE_DIR / "sources.json", encoding="utf-8"))
+    for s in fuentes:
+        url = urlparse(s["url_seccion"])
+        db.merge(Medio(id=str(s["id"]), nombre=s["nombre"],
+                       url_base=f"{url.scheme}://{url.netloc}", sesgo_politico=s["sesgo"]))
+    db.commit()
+    print(f"[medios] {len(fuentes)} medios sincronizados")
 
-        db.commit()
-        print(f"[✓] Carga finalizada con éxito. {len(events)} eventos procesados y guardados en la BD.")
-    
-    except Exception as e:
-        print(f"[-] Error durante la carga: {e}")
-        db.rollback()
-    finally:
-        db.close()
+
+def cargar_eventos(db):
+    eventos = json.load(open(PIPELINE_DIR / "processed_events.json", encoding="utf-8"))
+    nuevos_eventos = nuevas_noticias = ampliados = 0
+    for event_data in eventos:
+        grupo, vistas = [], set()
+        for n in event_data.get("noticias", []):
+            if n["url"] not in vistas:
+                grupo.append(n)
+                vistas.add(n["url"])
+        existentes = {n["url"]: db.query(Noticia).filter(Noticia.url_noticia == n["url"]).first()
+                      for n in grupo}
+        nuevas = [n for n in grupo if existentes[n["url"]] is None]
+        if not nuevas:
+            continue
+        previa = next((x for x in existentes.values() if x is not None), None)
+        if previa:
+            evento_id = previa.evento_id
+            ampliados += 1
+        else:
+            evento = Evento(titulo_neutro=titulo_evento(nuevas))
+            db.add(evento)
+            db.flush()
+            evento_id = evento.id
+            nuevos_eventos += 1
+        for n in nuevas:
+            noticia = Noticia(evento_id=evento_id, medio_id=str(n["medio_id"]),
+                              titulo_original=n["titulo"], cuerpo=n.get("cuerpo", ""),
+                              autor=n.get("autor"), url_noticia=n["url"],
+                              imagen_url=n.get("imagen_url"))
+            db.add(noticia)
+            db.flush()
+            a = n.get("analisis")
+            if a:
+                db.add(AnalisisNoticia(noticia_id=noticia.id, **a))
+            nuevas_noticias += 1
+    db.commit()
+    print(f"[eventos] {nuevos_eventos} nuevos, {ampliados} ampliados, {nuevas_noticias} noticias nuevas")
+
 
 if __name__ == "__main__":
-    run_loader()
+    Base.metadata.create_all(bind=engine)
+    db = SessionLocal()
+    try:
+        cargar_medios(db)
+        cargar_eventos(db)
+    finally:
+        db.close()
