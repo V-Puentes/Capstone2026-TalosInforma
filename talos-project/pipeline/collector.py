@@ -43,3 +43,20 @@ def get_article_urls(source: dict) -> list:
         print(f"[-] Excepción recolectando URLs de {source.get('nombre', '')}: {e}")
 
     return list(urls)
+
+from urllib.parse import urlparse
+from urllib.robotparser import RobotFileParser
+
+_robots = {}
+
+
+def permitido(url):
+    base = "{0.scheme}://{0.netloc}".format(urlparse(url))
+    if base not in _robots:
+        rp = RobotFileParser(base + "/robots.txt")
+        try:
+            rp.read()
+        except Exception:
+            rp = None
+        _robots[base] = rp
+    return _robots[base] is None or _robots[base].can_fetch("*", url)

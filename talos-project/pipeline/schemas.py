@@ -28,6 +28,6 @@ class AnalisisNoticia(BaseModel):
     )
     resumen_puntos: List[str] = Field(
         description="Resumen estructurado en un máximo de 3 puntos clave (viñetas) con los datos duros del texto.",
-        min_items=1,
-        max_items=3
+        min_length=1,
+        max_length=3
     )

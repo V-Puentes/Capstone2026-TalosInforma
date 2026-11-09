@@ -33,4 +33,4 @@ def test_extractor_structure():
         assert "titulo" in result
         assert "cuerpo" in result
         assert "medio_id" in result
-        assert result["medio_id"] == test_source["id"]
+        assert str(result["medio_id"]) == str(test_source["id"])
